@@ -91,7 +91,7 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onLoadingComplete }) => {
                 Viju Family
               </h1>
               <p className="text-lg text-gray-600 dark:text-gray-300 font-medium">
-                Premium Quality Since 1999
+                Premium Quality
               </p>
             </motion.div>
 

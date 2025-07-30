@@ -58,7 +58,7 @@
 <tr>
 <td width="50%">
 
-Welcome to **Viju Family** - a premium beverage and dairy products company that has been delivering exceptional quality since 1999. Our modern, responsive web application showcases our rich heritage while providing customers with an intuitive platform to explore our products, learn about our activities, and connect with our community.
+Welcome to **Viju Family** - a premium beverage and dairy products company that has been delivering exceptional quality. Our modern, responsive web application showcases our rich heritage while providing customers with an intuitive platform to explore our products, learn about our activities, and connect with our community.
 
 </td>
 <td width="50%">
@@ -653,6 +653,6 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 [![GitHub forks](https://img.shields.io/github/forks/kinatechBro/vijufamily?style=social)](https://github.com/kinatechBro/vijufamily/network)
 [![Follow on GitHub](https://img.shields.io/github/followers/kinatechBro?style=social)](https://github.com/kinatechBro)
 
-**🍊 Premium Quality Since 1999 🍊**
+**🍊 Premium Quality 🍊**
 
 </div>

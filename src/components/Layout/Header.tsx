@@ -151,7 +151,7 @@ const Header: React.FC = () => {
                     ? 'text-slate-500 dark:text-slate-400' 
                     : 'text-slate-600 dark:text-white/80'
                 }`}>
-                  Premium Quality Since 1999
+                  Premium Quality
                 </span>
               </div>
             </Link>
