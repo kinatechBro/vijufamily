@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Building2, ChevronDown, Search, Bell } from 'lucide-react';
+import { Menu, X, ChevronDown, Search, Bell } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import ThemeToggle from '../UI/ThemeToggle';
 import { useCartStore } from '../../store/cartStore';
@@ -123,8 +123,12 @@ const Header: React.FC = () => {
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3, ease: "easeOut" }}
               >
-                <div className="w-14 h-14 bg-gradient-to-br from-red-600 via-orange-500 to-red-700 rounded-2xl flex items-center justify-center shadow-xl relative overflow-hidden">
-                  <Building2 className="w-8 h-8 text-white relative z-10" />
+                <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center shadow-xl relative overflow-hidden border-2 border-orange-200">
+                  <img 
+                    src="/assets/viju_logo.png" 
+                    alt="Viju Industries Logo" 
+                    className="w-10 h-10 object-contain relative z-10"
+                  />
                   <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent"></div>
                   <div className="absolute -inset-1 bg-gradient-to-br from-red-600 to-orange-500 rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-xl"></div>
                 </div>
