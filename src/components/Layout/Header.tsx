@@ -116,7 +116,7 @@ const Header: React.FC = () => {
             <Link 
               to="/" 
               className="flex items-center space-x-4 group relative z-10"
-              aria-label="Viju Industries Home"
+              aria-label="Viju Family Home"
             >
               <motion.div 
                 className="relative"
@@ -126,7 +126,7 @@ const Header: React.FC = () => {
                 <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center shadow-xl relative overflow-hidden border-2 border-orange-200">
                   <img 
                     src="/assets/viju_logo.png" 
-                    alt="Viju Industries Logo" 
+                    alt="Viju Family Logo" 
                     className="w-10 h-10 object-contain relative z-10"
                   />
                   <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent"></div>
@@ -138,16 +138,18 @@ const Header: React.FC = () => {
                   className={`text-2xl font-bold transition-all duration-300 ${
                     scrolled 
                       ? 'text-slate-900 dark:text-white' 
-                      : 'text-white dark:text-white'
+                      : location.pathname === '/' 
+                        ? 'bg-gradient-to-r from-red-600 via-orange-500 to-red-500 bg-clip-text text-transparent dark:text-white'
+                        : 'text-slate-900 dark:text-white'
                   } group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-red-600 group-hover:to-orange-500`}
                   whileHover={{ scale: 1.02 }}
                 >
-                  Viju Industries
+                  Viju Family
                 </motion.span>
                 <span className={`text-sm font-medium transition-colors duration-300 ${
                   scrolled 
                     ? 'text-slate-500 dark:text-slate-400' 
-                    : 'text-white/80 dark:text-white/80'
+                    : 'text-slate-600 dark:text-white/80'
                 }`}>
                   Premium Quality Since 1999
                 </span>
@@ -169,7 +171,7 @@ const Header: React.FC = () => {
                             ? 'text-orange-600 dark:text-orange-400 bg-orange-50/80 dark:bg-orange-900/30 shadow-lg'
                             : scrolled
                             ? 'text-slate-700 dark:text-slate-300 hover:text-orange-600 dark:hover:text-orange-400'
-                            : 'text-white hover:text-orange-300 hover:bg-white/10'
+                            : 'text-slate-900 dark:text-white hover:text-orange-600 dark:hover:text-orange-300 hover:bg-white/10'
                         }`}
                         whileHover={{ scale: 1.02 }}
                         whileTap={{ scale: 0.98 }}
@@ -236,7 +238,7 @@ const Header: React.FC = () => {
                             ? 'text-orange-600 dark:text-orange-400 bg-orange-50/80 dark:bg-orange-900/30 shadow-lg'
                             : scrolled
                             ? 'text-slate-700 dark:text-slate-300 hover:text-orange-600 dark:hover:text-orange-400'
-                            : 'text-white hover:text-orange-300 hover:bg-white/10'
+                            : 'text-slate-900 dark:text-white hover:text-orange-600 dark:hover:text-orange-300 hover:bg-white/10'
                         }`}
                       >
                         {item.label}
@@ -255,7 +257,7 @@ const Header: React.FC = () => {
                 className={`hidden md:flex p-3 rounded-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 dark:focus:ring-offset-slate-900 ${
                   scrolled 
                     ? 'text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800' 
-                    : 'text-white hover:bg-white/10'
+                    : 'text-slate-700 dark:text-white hover:bg-slate-100/50 dark:hover:bg-white/10'
                 }`}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -269,7 +271,7 @@ const Header: React.FC = () => {
                 className={`hidden md:flex p-3 rounded-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 dark:focus:ring-offset-slate-900 relative ${
                   scrolled 
                     ? 'text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800' 
-                    : 'text-white hover:bg-white/10'
+                    : 'text-slate-700 dark:text-white hover:bg-slate-100/50 dark:hover:bg-white/10'
                 }`}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -288,7 +290,7 @@ const Header: React.FC = () => {
                 className={`relative p-3 rounded-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 dark:focus:ring-offset-slate-900 ${
                   scrolled 
                     ? 'text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800' 
-                    : 'text-white hover:bg-white/10'
+                    : 'text-slate-700 dark:text-white hover:bg-slate-100/50 dark:hover:bg-white/10'
                 }`}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -308,7 +310,7 @@ const Header: React.FC = () => {
                 className={`lg:hidden p-3 rounded-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 dark:focus:ring-offset-slate-900 ${
                   scrolled 
                     ? 'text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800' 
-                    : 'text-white hover:bg-white/10'
+                    : 'text-slate-700 dark:text-white hover:bg-slate-100/50 dark:hover:bg-white/10'
                 }`}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
