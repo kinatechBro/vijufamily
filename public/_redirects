@@ -1,0 +1,5 @@
+# Netlify redirects for SPA routing
+/*    /index.html   200
+
+# WordPress API proxy (if needed)
+/api/*  https://your-wordpress-site.com/wp-json/wp/v2/:splat  200
