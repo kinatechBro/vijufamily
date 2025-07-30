@@ -55,7 +55,7 @@ const Hero: React.FC = () => {
               className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-white text-sm font-medium mb-6"
             >
               <Award className="w-4 h-4 mr-2 text-orange-400" />
-              India's Leading Beverage Company
+              Leading Beverage Company
             </motion.div>
 
             {/* Main Heading */}

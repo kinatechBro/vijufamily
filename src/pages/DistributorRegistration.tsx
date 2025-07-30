@@ -83,7 +83,7 @@ const DistributorRegistration: React.FC = () => {
               Become Our Distributor
             </h1>
             <p className="text-xl text-gray-600 mb-8">
-              Join our growing network of distributors and be part of India's leading beverage company
+              Join our growing network of distributors and be part of a leading beverage company
             </p>
           </motion.div>
         </div>
