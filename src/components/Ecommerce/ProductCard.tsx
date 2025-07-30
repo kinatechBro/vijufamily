@@ -256,39 +256,22 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, index = 0 }) => {
               </div>
             </div>
 
-            {/* Price Section with Enhanced Design */}
-            <div className="flex items-end justify-between">
-              <div className="space-y-1">
-                <div className="flex items-baseline gap-3">
-                  <motion.span 
-                    className="text-2xl font-bold bg-gradient-to-r from-orange-600 via-red-500 to-pink-500 bg-clip-text text-transparent"
-                    whileHover={{ scale: 1.05 }}
-                  >
-                    ${product.price.toFixed(2)}
-                  </motion.span>
-                  {product.originalPrice && product.originalPrice > product.price && (
-                    <span className="text-lg text-slate-400 dark:text-slate-500 line-through font-medium">
-                      ${product.originalPrice.toFixed(2)}
+            {/* Stock Status Section */}
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                {product.stock > 0 ? (
+                  <div className="flex items-center gap-1.5">
+                    <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+                    <span className="text-sm font-medium text-green-600 dark:text-green-400">
+                      {product.stock < 10 ? `${product.stock} left` : 'In Stock'}
                     </span>
-                  )}
-                </div>
-                
-                {/* Stock Status with Better Visual Hierarchy */}
-                <div className="flex items-center gap-2">
-                  {product.stock > 0 ? (
-                    <div className="flex items-center gap-1.5">
-                      <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-                      <span className="text-sm font-medium text-green-600 dark:text-green-400">
-                        {product.stock < 10 ? `${product.stock} left` : 'In Stock'}
-                      </span>
-                    </div>
-                  ) : (
-                    <div className="flex items-center gap-1.5">
-                      <div className="w-2 h-2 bg-red-500 rounded-full" />
-                      <span className="text-sm font-medium text-red-600 dark:text-red-400">Out of Stock</span>
-                    </div>
-                  )}
-                </div>
+                  </div>
+                ) : (
+                  <div className="flex items-center gap-1.5">
+                    <div className="w-2 h-2 bg-red-500 rounded-full" />
+                    <span className="text-sm font-medium text-red-600 dark:text-red-400">Out of Stock</span>
+                  </div>
+                )}
               </div>
             </div>
 

@@ -3,8 +3,6 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown, Search, Bell } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import ThemeToggle from '../UI/ThemeToggle';
-import { useCartStore } from '../../store/cartStore';
-import { ShoppingBag } from 'lucide-react';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,7 +10,6 @@ const Header: React.FC = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [searchOpen, setSearchOpen] = useState(false);
   const location = useLocation();
-  const { getItemCount, toggleCart } = useCartStore();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -107,7 +104,7 @@ const Header: React.FC = () => {
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           scrolled 
             ? 'bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl shadow-2xl border-b border-slate-200/20 dark:border-slate-700/20' 
-            : 'bg-transparent'
+            : 'bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl shadow-lg border-b border-slate-200/20 dark:border-slate-700/20 lg:bg-transparent lg:dark:bg-transparent lg:backdrop-blur-none lg:shadow-none lg:border-none'
         }`}
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -283,26 +280,6 @@ const Header: React.FC = () => {
 
               {/* Theme Toggle */}
               <ThemeToggle />
-              
-              {/* Shopping Cart */}
-              <motion.button
-                onClick={toggleCart}
-                className={`relative p-3 rounded-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 dark:focus:ring-offset-slate-900 ${
-                  scrolled 
-                    ? 'text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800' 
-                    : 'text-slate-700 dark:text-white hover:bg-slate-100/50 dark:hover:bg-white/10'
-                }`}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                aria-label="Shopping cart"
-              >
-                <ShoppingBag size={20} />
-                {getItemCount() > 0 && (
-                  <span className="absolute -top-1 -right-1 w-5 h-5 bg-orange-500 text-white text-xs rounded-full flex items-center justify-center font-medium">
-                    {getItemCount()}
-                  </span>
-                )}
-              </motion.button>
               
               {/* Mobile Menu Button */}
               <motion.button

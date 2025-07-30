@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { ThemeProvider } from './contexts/ThemeContext';
 import { QueryProvider } from './providers/QueryProvider';
 import ErrorBoundary from './components/UI/ErrorBoundary';
@@ -68,12 +68,12 @@ function App() {
                         <div className="text-center">
                           <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">404 - Page Not Found</h1>
                           <p className="text-xl text-gray-600 dark:text-gray-400 mb-8">The page you're looking for doesn't exist.</p>
-                          <a 
-                            href="/" 
+                          <Link 
+                            to="/" 
                             className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-red-600 hover:to-orange-600 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900"
                           >
                             Go Home
-                          </a>
+                          </Link>
                         </div>
                       </div>
                     } />

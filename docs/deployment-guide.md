@@ -1,6 +1,112 @@
-# WordPress Deployment Guide for Viju Family Product Catalog (Nigerian Market)
+# Deployment Guide for Viju Family Application
 
-This guide will help you deploy the Viju Family React product catalog application to WordPress, specifically configured for the Nigerian market as a view-only product showcase system.
+This guide covers deployment options for the Viju Family React application, including both Vercel and WordPress deployments.
+
+## Vercel Deployment (Recommended for React Apps)
+
+### Prerequisites
+- GitHub account with the repository
+- Vercel account (free tier available)
+- Node.js 18+ and npm installed locally
+
+### Step 1: Vercel Configuration
+The repository already includes a `vercel.json` file with the following configuration:
+
+```json
+{
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/static/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ],
+  "cleanUrls": true,
+  "trailingSlash": false
+}
+```
+
+This configuration:
+- Handles client-side routing (fixes refresh issues)
+- Sets proper caching headers
+- Enables clean URLs
+- Prevents trailing slash issues
+
+### Step 2: Deploy to Vercel
+
+#### Option A: Deploy via Vercel CLI
+```bash
+# Install Vercel CLI
+npm i -g vercel
+
+# Login to Vercel
+vercel login
+
+# Deploy from project root
+vercel
+
+# For production deployment
+vercel --prod
+```
+
+#### Option B: Deploy via GitHub Integration
+1. Go to [vercel.com](https://vercel.com)
+2. Sign in with GitHub
+3. Click "New Project"
+4. Import your repository
+5. Configure build settings:
+   - Framework Preset: Vite
+   - Build Command: `npm run build`
+   - Output Directory: `dist`
+   - Install Command: `npm install`
+
+### Step 3: Environment Variables (if needed)
+In Vercel dashboard, add any environment variables:
+- `VITE_API_URL` (if using external APIs)
+- `VITE_WORDPRESS_URL` (if integrating with WordPress)
+
+### Step 4: Custom Domain (Optional)
+1. In Vercel project settings
+2. Go to "Domains"
+3. Add your custom domain
+4. Configure DNS records as instructed
+
+## Fixing Common Issues
+
+### 1. Page Refresh 404 Errors
+**Issue**: URLs break when refreshing the page
+**Solution**: The `vercel.json` configuration handles this with rewrites
+
+### 2. Build Errors
+**Issue**: Build fails on Vercel
+**Solutions**:
+- Check Node.js version compatibility
+- Ensure all dependencies are in `package.json`
+- Review build logs for specific errors
+
+### 3. Static Assets Not Loading
+**Issue**: Images/fonts not loading
+**Solution**: Ensure assets are in the `public` folder and referenced correctly
+
+## WordPress Deployment Guide for Nigerian Market
+
+This section covers WordPress integration for the Nigerian market as a view-only product showcase system.
 
 ## Prerequisites
 

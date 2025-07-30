@@ -1,23 +1,27 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import { Search, Filter, Grid, List, SlidersHorizontal } from 'lucide-react';
+import { Search, Grid, List, SlidersHorizontal } from 'lucide-react';
 import { products, categories } from '../data/products';
-import { Product } from '../types/ecommerce';
 import ProductCard from '../components/Ecommerce/ProductCard';
 import { useSearchParams } from 'react-router-dom';
 
 const Products: React.FC = () => {
-  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
   const [searchParams, setSearchParams] = useSearchParams();
-  const [selectedCategory, setSelectedCategory] = useState<string>(
-    searchParams.get('category') || 'all'
-  );
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [sortBy, setSortBy] = useState<string>('featured');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [priceRange, setPriceRange] = useState<[number, number]>([0, 1000]);
   const [showFilters, setShowFilters] = useState(false);
+
+  // Set category from URL params or default to 'all'
+  useEffect(() => {
+    const categoryFromUrl = searchParams.get('category');
+    if (categoryFromUrl) {
+      setSelectedCategory(categoryFromUrl);
+    } else {
+      setSelectedCategory('all');
+    }
+  }, [searchParams]);
 
   // Filter products based on category and search
   const filteredProducts = products.filter((product) => {
@@ -27,18 +31,12 @@ const Products: React.FC = () => {
       product.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
       product.description.toLowerCase().includes(searchTerm.toLowerCase());
     
-    const matchesPrice = product.price >= priceRange[0] && product.price <= priceRange[1];
-    
-    return matchesCategory && matchesSearch && matchesPrice;
+    return matchesCategory && matchesSearch;
   });
 
   // Sort products
   const sortedProducts = [...filteredProducts].sort((a, b) => {
     switch (sortBy) {
-      case 'price-asc':
-        return a.price - b.price;
-      case 'price-desc':
-        return b.price - a.price;
       case 'rating':
         return b.rating - a.rating;
       case 'newest':
@@ -124,8 +122,6 @@ const Products: React.FC = () => {
               >
                 <option value="featured">Featured</option>
                 <option value="newest">Newest</option>
-                <option value="price-asc">Price: Low to High</option>
-                <option value="price-desc">Price: High to Low</option>
                 <option value="rating">Highest Rated</option>
               </select>
               
@@ -165,32 +161,10 @@ const Products: React.FC = () => {
               className="mt-6 p-6 bg-slate-50 dark:bg-slate-800 rounded-lg"
             >
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {/* Price Range */}
-                <div>
-                  <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-3">
-                    Price Range: ₹{priceRange[0]} - ₹{priceRange[1]}
-                  </label>
-                  <div className="flex items-center gap-4">
-                    <input
-                      type="range"
-                      min="0"
-                      max="1000"
-                      value={priceRange[0]}
-                      onChange={(e) => setPriceRange([parseInt(e.target.value), priceRange[1]])}
-                      className="flex-1"
-                    />
-                    <input
-                      type="range"
-                      min="0"
-                      max="1000"
-                      value={priceRange[1]}
-                      onChange={(e) => setPriceRange([priceRange[0], parseInt(e.target.value)])}
-                      className="flex-1"
-                    />
-                  </div>
-                </div>
-                
                 {/* Additional filters can be added here */}
+                <div className="text-center text-slate-500 dark:text-slate-400 py-8">
+                  Additional filters coming soon...
+                </div>
               </div>
             </motion.div>
           )}
