@@ -116,7 +116,7 @@ const Checkout: React.FC = () => {
                 <div
                   className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-medium ${
                     step >= stepNumber
-                      ? 'bg-orange-500 text-white'
+                      ? 'bg-red-500 text-white'
                       : 'bg-slate-200 dark:bg-slate-700 text-slate-500'
                   }`}
                 >
@@ -125,7 +125,7 @@ const Checkout: React.FC = () => {
                 {stepNumber < 3 && (
                   <div
                     className={`w-12 h-0.5 mx-2 ${
-                      step > stepNumber ? 'bg-orange-500' : 'bg-slate-200 dark:bg-slate-700'
+                      step > stepNumber ? 'bg-red-500' : 'bg-slate-200 dark:bg-slate-700'
                     }`}
                   />
                 )}
@@ -141,7 +141,7 @@ const Checkout: React.FC = () => {
               {/* Contact Information */}
               <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-6">
                 <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-6 flex items-center">
-                  <div className="w-8 h-8 bg-orange-500 text-white rounded-full flex items-center justify-center mr-3 text-sm font-medium">
+                  <div className="w-8 h-8 bg-red-500 text-white rounded-full flex items-center justify-center mr-3 text-sm font-medium">
                     1
                   </div>
                   Contact Information
@@ -183,7 +183,7 @@ const Checkout: React.FC = () => {
               {/* Shipping Address */}
               <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-6">
                 <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-6 flex items-center">
-                  <div className="w-8 h-8 bg-orange-500 text-white rounded-full flex items-center justify-center mr-3 text-sm font-medium">
+                  <div className="w-8 h-8 bg-red-500 text-white rounded-full flex items-center justify-center mr-3 text-sm font-medium">
                     2
                   </div>
                   Shipping Address
@@ -289,7 +289,7 @@ const Checkout: React.FC = () => {
               {/* Payment Method */}
               <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-6">
                 <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-6 flex items-center">
-                  <div className="w-8 h-8 bg-orange-500 text-white rounded-full flex items-center justify-center mr-3 text-sm font-medium">
+                  <div className="w-8 h-8 bg-red-500 text-white rounded-full flex items-center justify-center mr-3 text-sm font-medium">
                     3
                   </div>
                   Payment Method
@@ -305,8 +305,8 @@ const Checkout: React.FC = () => {
                       key={method.id}
                       className={`flex items-center p-4 border rounded-lg cursor-pointer transition-colors ${
                         paymentMethod === method.id
-                          ? 'border-orange-500 bg-orange-50 dark:bg-orange-900/20'
-                          : 'border-slate-200 dark:border-slate-700 hover:border-orange-300'
+                          ? 'border-red-500 bg-red-50 dark:bg-red-900/20'
+                          : 'border-slate-200 dark:border-slate-700 hover:border-red-300'
                       }`}
                     >
                       <input

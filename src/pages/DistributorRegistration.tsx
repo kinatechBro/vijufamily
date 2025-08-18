@@ -61,17 +61,17 @@ const DistributorRegistration: React.FC = () => {
   ];
 
   const investmentOptions = [
-    'Less than ₹5 Lakhs',
-    '₹5-10 Lakhs',
-    '₹10-25 Lakhs',
-    '₹25-50 Lakhs',
-    'More than ₹50 Lakhs'
+    'Less than ₦500,000 Naria',
+    '₦500,000-1,000,000 Naria',
+    '₦1,000,000-2,500,000 Naria',
+    '₦2,500,000-5,000,000 Naria',
+    'More than ₦5,000,000 Naria'
   ];
 
   return (
     <div className="pt-16">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-red-50 to-orange-50">
+      <section className="py-20 bg-gradient-to-br from-red-50 to-red-100">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -163,11 +163,43 @@ const DistributorRegistration: React.FC = () => {
               </h2>
 
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+                
+                {/* Personal Information */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-2">
+                      First Name *
+                    </label>
+                    <input
+                      type="text"
+                      id="firstName"
+                      {...register('firstName')}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all"
+                      placeholder="Enter first name"
+                    />
+                    {errors.firstName && <p className="mt-1 text-sm text-red-600">{errors.firstName.message}</p>}
+                  </div>
+
+                  <div>
+                    <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-2">
+                      Last Name *
+                    </label>
+                    <input
+                      type="text"
+                      id="lastName"
+                      {...register('lastName')}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all"
+                      placeholder="Enter Last name"
+                    />
+                    {errors.lastName && <p className="mt-1 text-sm text-red-600">{errors.lastName.message}</p>}
+                  </div>
+                </div>
+
                 {/* Company Information */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="companyName" className="block text-sm font-medium text-gray-700 mb-2">
-                      Company Name *
+                      Business Name *
                     </label>
                     <input
                       type="text"
@@ -180,17 +212,17 @@ const DistributorRegistration: React.FC = () => {
                   </div>
 
                   <div>
-                    <label htmlFor="contactPerson" className="block text-sm font-medium text-gray-700 mb-2">
-                      Contact Person *
+                    <label htmlFor="regNumber" className="block text-sm font-medium text-gray-700 mb-2">
+                      Reg Number *
                     </label>
                     <input
                       type="text"
-                      id="contactPerson"
-                      {...register('contactPerson')}
+                      id="regNumber"
+                      {...register('regNumber')}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all"
-                      placeholder="Enter contact person name"
+                      placeholder="Enter Registration Number"
                     />
-                    {errors.contactPerson && <p className="mt-1 text-sm text-red-600">{errors.contactPerson.message}</p>}
+                    {errors.regNumber && <p className="mt-1 text-sm text-red-600">{errors.regNumber.message}</p>}
                   </div>
                 </div>
 
@@ -225,6 +257,51 @@ const DistributorRegistration: React.FC = () => {
                   </div>
                 </div>
 
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <div>
+                    <label htmlFor="numberOfTrucks" className="block text-sm font-medium text-gray-700 mb-2">
+                      No. of Trucks *
+                    </label>
+                    <input
+                      type="text"
+                      id="numberOfTrucks"
+                      {...register('numberOfTrucks')}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all"
+                      placeholder="Enter Number of Trucks"
+                    />
+                    {errors.numberOfTrucks && <p className="mt-1 text-sm text-red-600">{errors.numberOfTrucks.message}</p>}
+                  </div>
+
+                  <div>
+                    <label htmlFor="truckType" className="block text-sm font-medium text-gray-700 mb-2">
+                      Truck Types *
+                    </label>
+                    <input
+                      type="text"
+                      id="truckType"
+                      {...register('truckType')}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all"
+                      placeholder="Enter Truck type"
+                    />
+                    {errors.truckType && <p className="mt-1 text-sm text-red-600">{errors.truckType.message}</p>}
+                  </div>
+
+                  <div>
+                    <label htmlFor="territory" className="block text-sm font-medium text-gray-700 mb-2">
+                      Location/Area Cover *
+                    </label>
+                    <input
+                      type="text"
+                      id="territory"
+                      {...register('territory')}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all"
+                      placeholder="Enter preferred territory"
+                    />
+                    {errors.territory && <p className="mt-1 text-sm text-red-600">{errors.territory.message}</p>}
+                  </div>
+
+                </div>
+
                 {/* Address Information */}
                 <div>
                   <label htmlFor="address" className="block text-sm font-medium text-gray-700 mb-2">
@@ -240,7 +317,9 @@ const DistributorRegistration: React.FC = () => {
                   {errors.address && <p className="mt-1 text-sm text-red-600">{errors.address.message}</p>}
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+
+                {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   <div>
                     <label htmlFor="city" className="block text-sm font-medium text-gray-700 mb-2">
                       City *
@@ -282,10 +361,10 @@ const DistributorRegistration: React.FC = () => {
                     />
                     {errors.pincode && <p className="mt-1 text-sm text-red-600">{errors.pincode.message}</p>}
                   </div>
-                </div>
+                </div> */}
 
                 {/* Business Information */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="businessType" className="block text-sm font-medium text-gray-700 mb-2">
                       Business Type *
@@ -319,9 +398,9 @@ const DistributorRegistration: React.FC = () => {
                     </select>
                     {errors.experience && <p className="mt-1 text-sm text-red-600">{errors.experience.message}</p>}
                   </div>
-                </div>
+                </div> */}
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="territory" className="block text-sm font-medium text-gray-700 mb-2">
                       Preferred Territory *
@@ -352,7 +431,7 @@ const DistributorRegistration: React.FC = () => {
                     </select>
                     {errors.investment && <p className="mt-1 text-sm text-red-600">{errors.investment.message}</p>}
                   </div>
-                </div>
+                </div> */}
 
                 <button
                   type="submit"

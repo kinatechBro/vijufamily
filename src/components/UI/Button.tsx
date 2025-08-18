@@ -38,9 +38,9 @@ const Button: React.FC<ButtonProps> = ({
 
   const variants = {
     primary: gradient
-      ? `bg-gradient-to-r from-red-600 to-orange-500 text-white 
-         hover:from-red-700 hover:to-orange-600 
-         focus:ring-orange-500 shadow-lg hover:shadow-xl
+      ? `bg-gradient-to-r from-red-600 to-red-500 text-white 
+         hover:from-red-700 hover:to-red-600 
+         focus:ring-red-500 shadow-lg hover:shadow-xl
          hover:-translate-y-0.5 active:translate-y-0`
       : `bg-red-600 text-white hover:bg-red-700 
          focus:ring-red-500 shadow-md hover:shadow-lg

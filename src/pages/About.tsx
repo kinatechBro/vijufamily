@@ -31,12 +31,12 @@ const About: React.FC = () => {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-50 to-white dark:from-slate-900 dark:to-slate-800">
         {/* Dynamic gradient background with brand colors */}
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-red-50/80 via-orange-50/60 to-red-100/70 dark:from-red-900/20 dark:via-orange-900/10 dark:to-red-800/20"></div>
-          <div className="absolute inset-0 bg-gradient-to-tl from-orange-100/50 via-transparent to-red-100/40 dark:from-orange-900/10 dark:via-transparent dark:to-red-900/10"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-red-50/80 via-red-50/60 to-red-100/70 dark:from-red-900/20 dark:via-red-800/10 dark:to-red-800/20"></div>
+          <div className="absolute inset-0 bg-gradient-to-tl from-red-100/50 via-transparent to-red-100/40 dark:from-red-900/10 dark:via-transparent dark:to-red-900/10"></div>
           
           {/* Animated orbs with brand colors */}
-          <div className="absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-red-200/40 to-orange-200/40 dark:from-red-400/30 dark:to-orange-400/30 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
-          <div className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-orange-200/30 to-red-200/30 dark:from-orange-400/20 dark:to-red-400/20 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-1000"></div>
+          <div className="absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-red-200/40 to-red-200/40 dark:from-red-400/30 dark:to-red-400/30 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
+          <div className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-red-200/30 to-red-200/30 dark:from-red-400/20 dark:to-red-400/20 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-1000"></div>
         </div>
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -91,11 +91,11 @@ const About: React.FC = () => {
                 transition={{ duration: 1, delay: 0.9 }}
                 className="flex flex-col sm:flex-row gap-4"
               >
-                <button className="group bg-gradient-to-r from-red-500 to-orange-500 text-white px-8 py-4 rounded-2xl font-bold text-lg hover:from-red-600 hover:to-orange-600 transition-all duration-300 shadow-2xl hover:shadow-red-500/25 flex items-center justify-center">
+                <button className="group bg-gradient-to-r from-red-500 to-red-600 text-white px-8 py-4 rounded-2xl font-bold text-lg hover:from-red-600 hover:to-red-700 transition-all duration-300 shadow-2xl hover:shadow-red-500/25 flex items-center justify-center">
                   Explore Our Journey
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                 </button>
-                <button className="bg-white/80 backdrop-blur-xl border border-orange-200 dark:bg-white/10 dark:border-white/20 text-gray-900 dark:text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-white/90 dark:hover:bg-white/20 transition-all duration-300 shadow-xl">
+                <button className="bg-white/80 backdrop-blur-xl border border-red-200 dark:bg-white/10 dark:border-white/20 text-gray-900 dark:text-white px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-white/90 dark:hover:bg-white/20 transition-all duration-300 shadow-xl">
                   Our Products
                 </button>
               </motion.div>
@@ -370,7 +370,7 @@ const About: React.FC = () => {
                 <div className="w-16 h-16 bg-gradient-to-r from-amber-500 to-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Star className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">Coffee Milk Drink</h3>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">Milk Drink</h3>
                 <p className="text-gray-600 dark:text-white/70 text-sm">Indulgent Viju Coffee Milk Drink - perfect blend of rich taste and energy</p>
               </div>
             </motion.div>

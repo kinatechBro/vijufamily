@@ -58,8 +58,8 @@ export const mockData = {
   posts: [
     {
       id: 1,
-      title: 'Viju Industries Launches New Organic Juice Line',
-      excerpt: 'We are excited to announce our new line of organic juices made from the finest ingredients sourced directly from certified organic farms.',
+      title: 'Viju Industries Launches New Organic Beverage Line',
+      excerpt: 'We are excited to announce our new line of organic beverages made from the finest ingredients sourced directly from certified organic farms.',
       content: 'Full content here...',
       image: 'https://images.pexels.com/photos/1128678/pexels-photo-1128678.jpeg?auto=compress&cs=tinysrgb&w=800',
       date: '2024-01-15',
@@ -87,10 +87,10 @@ export const mockData = {
   products: [
     {
       id: 1,
-      title: 'Premium Orange Juice',
-      description: 'Fresh and natural orange juice with no artificial additives, made from hand-picked oranges',
+      title: 'Premium Orange Beverage',
+      description: 'Fresh and natural orange beverage with no artificial additives, made from hand-picked oranges',
       image: 'https://images.pexels.com/photos/1337825/pexels-photo-1337825.jpeg?auto=compress&cs=tinysrgb&w=800',
-      category: 'juices' as const,
+      category: 'beverages' as const,
       price: 120
     },
     {
@@ -111,10 +111,10 @@ export const mockData = {
     },
     {
       id: 4,
-      title: 'Mixed Fruit Juice',
+      title: 'Mixed Fruit Beverage',
       description: 'Delicious blend of seasonal fruits packed with vitamins and natural goodness',
       image: 'https://images.pexels.com/photos/1435735/pexels-photo-1435735.jpeg?auto=compress&cs=tinysrgb&w=800',
-      category: 'juices' as const,
+      category: 'beverages' as const,
       price: 140
     },
     {

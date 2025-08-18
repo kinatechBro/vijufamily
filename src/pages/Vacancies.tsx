@@ -168,7 +168,7 @@ const Vacancies: React.FC = () => {
                 className="text-center mb-16"
               >
                 <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                  Open <span className="bg-gradient-to-r from-red-600 to-orange-500 bg-clip-text text-transparent">Positions</span>
+                  Open <span className="bg-gradient-to-r from-red-600 to-red-500 bg-clip-text text-transparent">Positions</span>
                 </h2>
                 <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                   Discover exciting career opportunities in power generation and electrical engineering
@@ -179,9 +179,10 @@ const Vacancies: React.FC = () => {
                 <motion.div
                   key={vacancy.id}
                   ref={ref}
-                  initial={{ opacity: 0, y: 40 }}
+                  initial={{ opacity: 0, y: 20 }}
                   animate={inView ? { opacity: 1, y: 0 } : {}}
-                  transition={{ duration: 0.8, delay: index * 0.2, ease: "easeOut" }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.3, delay: index * 0.05, ease: "easeOut" }}
                   className="group relative"
                 >
                   {/* Modern glass card with hover effects */}
@@ -336,7 +337,7 @@ const Vacancies: React.FC = () => {
           >
             {/* Header */}
             <div className="text-center mb-8">
-              <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-red-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <Send className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-2">

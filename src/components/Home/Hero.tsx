@@ -8,7 +8,7 @@ import { StatCard } from '../UI/Card';
 const Hero: React.FC = () => {
   const stats = [
     { icon: Award, value: '25+', label: 'Years Experience' },
-    { icon: Users, value: '10K+', label: 'Happy Customers' },
+    { icon: Users, value: '100K+', label: 'Happy Customers' },
     { icon: Globe, value: '50+', label: 'Cities Served' },
   ];
 
@@ -28,7 +28,7 @@ const Hero: React.FC = () => {
       {/* Floating Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
-          className="absolute top-20 left-10 w-20 h-20 bg-orange-500/10 rounded-full blur-xl"
+          className="absolute top-20 left-10 w-20 h-20 bg-red-500/10 rounded-full blur-xl"
           animate={{ y: [0, -20, 0], x: [0, 10, 0] }}
           transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
         />
@@ -65,7 +65,8 @@ const Hero: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.3 }}
               className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight"
             >
-              Crafting Quality
+              {/* Crafting Quality */}
+              Producing Quality
               <span className="block">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-400">
                   Beverages
@@ -84,7 +85,7 @@ const Hero: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.5 }}
               className="text-xl md:text-2xl text-slate-200 mb-8 max-w-3xl mx-auto lg:mx-0 leading-relaxed"
             >
-              Leading the industry with premium juices, refreshing beverages, and 
+              Leading the industry with premium refreshing beverages and 
               pure dairy products. Experience the taste of excellence with every sip.
             </motion.p>
 

@@ -12,7 +12,7 @@
 <br><br>
 
 <div style="display: flex; gap: 8px; justify-content: center; flex-wrap: wrap;">
-  <img src="https://img.shields.io/badge/🥤_Fresh-Juices-FF6B35?style=flat-square&labelColor=2A2A2A" alt="Fresh Juices">
+  <!-- <img src="https://img.shields.io/badge/🥤_Fresh-Juices-FF6B35?style=flat-square&labelColor=2A2A2A" alt="Fresh Juices"> -->
   <img src="https://img.shields.io/badge/🥛_Premium-Dairy-F7931E?style=flat-square&labelColor=2A2A2A" alt="Premium Dairy">
   <img src="https://img.shields.io/badge/🥃_Craft-Beverages-FFD23F?style=flat-square&labelColor=2A2A2A" alt="Craft Beverages">
 </div>

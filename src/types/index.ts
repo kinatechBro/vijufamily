@@ -3,7 +3,7 @@ export interface Product {
   title: string;
   description: string;
   image: string;
-  category: 'juices' | 'beverages' | 'dairy';
+  category: 'beverages' | 'dairy';
   price?: number;
 }
 
@@ -37,6 +37,12 @@ export interface ContactForm {
 }
 
 export interface DistributorForm {
+  firstName: string;
+  lastName: string;
+  regNumber: number;
+  numberOfTrucks: number;
+  truckType: string;
+
   companyName: string;
   contactPerson: string;
   email: string;

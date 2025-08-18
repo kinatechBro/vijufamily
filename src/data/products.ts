@@ -1,7 +1,7 @@
 import { Product } from '../types/ecommerce';
 
 export const products: Product[] = [
-  // Fresh Juices
+  // Beverages (formerly Fresh Juices)
   {
     id: 1,
     title: 'V-Cool Orange',
@@ -10,7 +10,7 @@ export const products: Product[] = [
     images: [
       '/assets/v_cool_orange.jpeg',
     ],
-    category: 'juices',
+    category: 'beverages',
     price: 120,
     originalPrice: 150,
     discount: 20,
@@ -45,7 +45,7 @@ export const products: Product[] = [
     images: [
       '/assets/viju_apple_flavoured_milk_drink.jpeg',
     ],
-    category: 'juices',
+    category: 'beverages',
     price: 140,
     stock: 35,
     rating: 4.6,
@@ -75,7 +75,7 @@ export const products: Product[] = [
     title: 'Viju Milk Apple',
     description: 'Premium apple milk drink with authentic apple flavor. Perfect for health-conscious individuals.',
     image: '/assets/viju_milk_apple.jpeg',
-    category: 'juices',
+    category: 'beverages',
     price: 180,
     stock: 25,
     rating: 4.7,
@@ -321,14 +321,6 @@ export const products: Product[] = [
 ];
 
 export const categories = [
-  {
-    id: 'juices',
-    name: 'Fresh Juices',
-    slug: 'juices',
-    description: 'Premium natural fruit juices',
-    image: '/assets/viju_apple_flavoured_milk_drink.jpeg',
-    productCount: products.filter(p => p.category === 'juices').length,
-  },
   {
     id: 'beverages',
     name: 'Beverages',

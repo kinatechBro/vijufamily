@@ -57,12 +57,7 @@ const Header: React.FC = () => {
       path: '/products', 
       label: 'Products',
       dropdown: [
-        { 
-          path: '/products?category=juices', 
-          label: 'Fresh Juices',
-          description: 'Premium natural fruit juices',
-          icon: '🥤'
-        },
+        // Products dropdown items
         { 
           path: '/products?category=beverages', 
           label: 'Beverages',

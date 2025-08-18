@@ -50,7 +50,7 @@ const ContactForm: React.FC = () => {
       title: 'Visit Our Office',
       primary: '1, Awose close Awosika Avenue',
       secondary: 'Off Sapara Street, Off Oba Akran road, Ikeja Industrial Estate, Ikeja, Lagos.',
-      gradient: 'from-red-500 to-orange-500',
+      gradient: 'from-red-500 to-red-400',
       glowColor: 'red'
     },
     {
@@ -58,7 +58,7 @@ const ContactForm: React.FC = () => {
       title: 'Call Us Directly',
       primary: '+2348161674349',
       secondary: '+2348168108573',
-      gradient: 'from-orange-500 to-red-500',
+      gradient: 'from-red-400 to-red-500',
       glowColor: 'orange'
     },
     {
@@ -66,13 +66,13 @@ const ContactForm: React.FC = () => {
       title: 'Send Email',
       primary: 'info@vijufamily.com',
       secondary: 'We respond within 24 hours',
-      gradient: 'from-red-600 to-orange-400',
+      gradient: 'from-red-600 to-red-400',
       glowColor: 'red'
     }
   ];
 
   const stats = [
-    { icon: Users, value: '10K+', label: 'Happy Customers', color: 'text-red-500' },
+    { icon: Users, value: '100K+', label: 'Happy Customers', color: 'text-red-500' },
     { icon: Globe, value: '15+', label: 'States Covered', color: 'text-orange-500' },
     { icon: Clock, value: '24/7', label: 'Support Available', color: 'text-red-600' },
     { icon: Zap, value: '99%', label: 'Response Rate', color: 'text-orange-600' }
@@ -87,16 +87,16 @@ const ContactForm: React.FC = () => {
       >
         {/* Dynamic gradient background with brand colors */}
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-red-50/80 via-orange-50/60 to-red-100/70 dark:from-red-900/20 dark:via-orange-900/10 dark:to-red-800/20"></div>
-          <div className="absolute inset-0 bg-gradient-to-tl from-orange-100/50 via-transparent to-red-100/40 dark:from-orange-900/10 dark:via-transparent dark:to-red-900/10"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-red-50/80 via-red-50/60 to-red-100/70 dark:from-red-900/20 dark:via-red-800/10 dark:to-red-800/20"></div>
+          <div className="absolute inset-0 bg-gradient-to-tl from-red-100/50 via-transparent to-red-100/40 dark:from-red-900/10 dark:via-transparent dark:to-red-900/10"></div>
           
           {/* Animated orbs with brand colors */}
-          <div className="absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-red-200/40 to-orange-200/40 dark:from-red-400/30 dark:to-orange-400/30 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
-          <div className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-orange-200/30 to-red-200/30 dark:from-orange-400/20 dark:to-red-400/20 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-1000"></div>
+          <div className="absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-red-200/40 to-red-200/40 dark:from-red-400/30 dark:to-red-400/30 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
+          <div className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-red-200/30 to-red-200/30 dark:from-red-400/20 dark:to-red-400/20 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-1000"></div>
           
           {/* Floating shapes */}
           <div className="absolute top-1/3 right-1/4 w-32 h-32 border border-red-200/30 dark:border-red-400/20 rounded-full animate-spin" style={{ animationDuration: '20s' }}></div>
-          <div className="absolute bottom-1/3 left-1/4 w-24 h-24 border border-orange-200/30 dark:border-orange-400/20 rounded-full animate-spin" style={{ animationDuration: '15s', animationDirection: 'reverse' }}></div>
+          <div className="absolute bottom-1/3 left-1/4 w-24 h-24 border border-red-200/30 dark:border-red-400/20 rounded-full animate-spin" style={{ animationDuration: '15s', animationDirection: 'reverse' }}></div>
         </div>
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -183,7 +183,7 @@ const ContactForm: React.FC = () => {
           >
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
               Multiple Ways to 
-              <span className="block bg-gradient-to-r from-red-600 to-orange-500 bg-clip-text text-transparent">
+              <span className="block bg-gradient-to-r from-red-600 to-red-500 bg-clip-text text-transparent">
                 Connect
               </span>
             </h2>
@@ -199,7 +199,7 @@ const ContactForm: React.FC = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={infoInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
-                className="group relative"
+                className="group relative font-bold"
               >
                 <div className="relative bg-white/80 dark:bg-slate-800/80 backdrop-blur-xl rounded-3xl p-8 border border-white/30 dark:border-slate-700/30 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
                   {/* Floating glow effect */}
@@ -236,8 +236,8 @@ const ContactForm: React.FC = () => {
       >
         {/* Background elements */}
         <div className="absolute inset-0">
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-red-50/20 via-transparent to-orange-50/20 dark:from-red-900/5 dark:via-transparent dark:to-orange-900/5"></div>
-          <div className="absolute top-1/4 right-0 w-96 h-96 bg-gradient-to-l from-orange-100/30 to-transparent dark:from-orange-900/10 dark:to-transparent rounded-full filter blur-3xl"></div>
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-red-50/20 via-transparent to-red-50/20 dark:from-red-900/5 dark:via-transparent dark:to-red-900/5"></div>
+          <div className="absolute top-1/4 right-0 w-96 h-96 bg-gradient-to-l from-red-100/30 to-transparent dark:from-red-900/10 dark:to-transparent rounded-full filter blur-3xl"></div>
           <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-gradient-to-r from-red-100/30 to-transparent dark:from-red-900/10 dark:to-transparent rounded-full filter blur-3xl"></div>
         </div>
 
@@ -251,7 +251,7 @@ const ContactForm: React.FC = () => {
             <div className="text-center mb-12">
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
                 Send Us a 
-                <span className="bg-gradient-to-r from-red-600 to-orange-500 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-red-600 to-red-500 bg-clip-text text-transparent">
                   Message
                 </span>
               </h2>
@@ -281,7 +281,7 @@ const ContactForm: React.FC = () => {
                     onClick={() => contactMutation.reset()}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-8 py-4 rounded-2xl font-bold text-lg hover:from-red-600 hover:to-orange-600 transition-all duration-300 shadow-xl"
+                    className="bg-gradient-to-r from-red-500 to-red-600 text-white px-8 py-4 rounded-2xl font-bold text-lg hover:from-red-600 hover:to-red-700 transition-all duration-300 shadow-xl"
                   >
                     Send Another Message
                   </motion.button>
@@ -399,7 +399,7 @@ const ContactForm: React.FC = () => {
                     disabled={contactMutation.isPending}
                     whileHover={{ scale: contactMutation.isPending ? 1 : 1.05 }}
                     whileTap={{ scale: contactMutation.isPending ? 1 : 0.95 }}
-                    className="w-full bg-gradient-to-r from-red-500 to-orange-500 text-white py-4 px-8 rounded-2xl font-bold text-lg hover:from-red-600 hover:to-orange-600 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center shadow-2xl hover:shadow-red-500/25 focus:outline-none focus:ring-4 focus:ring-orange-500/20"
+                    className="w-full bg-gradient-to-r from-red-500 to-red-600 text-white py-4 px-8 rounded-2xl font-bold text-lg hover:from-red-600 hover:to-red-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center shadow-2xl hover:shadow-red-500/25 focus:outline-none focus:ring-4 focus:ring-red-500/20"
                   >
                     {contactMutation.isPending ? (
                       <>
@@ -432,7 +432,7 @@ const ContactForm: React.FC = () => {
           >
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
               Find Us on the 
-              <span className="bg-gradient-to-r from-red-600 to-orange-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-red-600 to-red-500 bg-clip-text text-transparent">
                 Map
               </span>
             </h2>
@@ -464,7 +464,7 @@ const ContactForm: React.FC = () => {
               {/* Overlay with company info */}
               <div className="absolute top-4 left-4 bg-white/95 dark:bg-slate-800/95 backdrop-blur-xl rounded-2xl p-4 shadow-xl border border-white/30 dark:border-slate-700/30">
                 <div className="flex items-start space-x-3">
-                  <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-orange-500 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-red-600 rounded-xl flex items-center justify-center flex-shrink-0">
                     <MapPin className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -484,7 +484,7 @@ const ContactForm: React.FC = () => {
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-4 py-2 rounded-xl font-semibold hover:from-red-600 hover:to-orange-600 transition-all duration-300 shadow-xl text-sm flex items-center gap-2"
+                  className="bg-gradient-to-r from-red-500 to-red-600 text-white px-4 py-2 rounded-xl font-semibold hover:from-red-600 hover:to-red-700 transition-all duration-300 shadow-xl text-sm flex items-center gap-2"
                 >
                   <MapPin className="w-4 h-4" />
                   Directions
@@ -532,7 +532,7 @@ const ContactForm: React.FC = () => {
                 <Clock className="w-8 h-8 text-orange-500 mx-auto mb-3" />
                 <h4 className="font-bold text-gray-900 dark:text-white mb-2">Business Hours</h4>
                 <p className="text-sm text-gray-600 dark:text-gray-400">
-                  Mon - Fri: 8:00 AM - 6:00 PM<br />
+                  Mon - Fri: 8:00 AM - 5:00 PM<br />
                   Sat: 9:00 AM - 4:00 PM
                 </p>
               </motion.div>

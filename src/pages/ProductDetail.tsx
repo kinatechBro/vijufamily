@@ -61,17 +61,17 @@ const ProductDetail: React.FC = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Breadcrumb */}
         <nav className="flex items-center space-x-2 text-sm mb-8">
-          <Link to="/" className="text-slate-500 hover:text-orange-600 transition-colors">
+          <Link to="/" className="text-slate-500 hover:text-red-600 transition-colors">
             Home
           </Link>
           <span className="text-slate-400">/</span>
-          <Link to="/products" className="text-slate-500 hover:text-orange-600 transition-colors">
+          <Link to="/products" className="text-slate-500 hover:text-red-600 transition-colors">
             Products
           </Link>
           <span className="text-slate-400">/</span>
           <Link 
             to={`/products?category=${product.category}`} 
-            className="text-slate-500 hover:text-orange-600 transition-colors capitalize"
+            className="text-slate-500 hover:text-red-600 transition-colors capitalize"
           >
             {product.category}
           </Link>
@@ -82,7 +82,7 @@ const ProductDetail: React.FC = () => {
         {/* Back Button */}
         <Link 
           to="/products" 
-          className="inline-flex items-center text-slate-600 dark:text-slate-400 hover:text-orange-600 dark:hover:text-orange-400 mb-8 transition-colors"
+          className="inline-flex items-center text-slate-600 dark:text-slate-400 hover:text-red-600 dark:hover:text-red-400 mb-8 transition-colors"
         >
           <ChevronLeft className="w-4 h-4 mr-1" />
           Back to Products
@@ -190,8 +190,8 @@ const ProductDetail: React.FC = () => {
                       onClick={() => setSelectedVariant(variant)}
                       className={`px-4 py-2 rounded-lg border transition-colors ${
                         selectedVariant?.id === variant.id
-                          ? 'border-orange-500 bg-orange-50 dark:bg-orange-900/20 text-orange-600 dark:text-orange-400'
-                          : 'border-slate-200 dark:border-slate-700 hover:border-orange-300 dark:hover:border-orange-600'
+                          ? 'border-red-500 bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400'
+                          : 'border-slate-200 dark:border-slate-700 hover:border-red-300 dark:hover:border-red-600'
                       }`}
                     >
                       {variant.name}
@@ -271,7 +271,7 @@ const ProductDetail: React.FC = () => {
                   <ul className="space-y-2 text-sm">
                     {product.features.map((feature, index) => (
                       <li key={index} className="flex items-center gap-2">
-                        <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
+                        <div className="w-2 h-2 bg-red-500 rounded-full"></div>
                         <span className="text-slate-600 dark:text-slate-400">{feature}</span>
                       </li>
                     ))}
@@ -296,7 +296,7 @@ const ProductDetail: React.FC = () => {
                   <ul className="space-y-2">
                     {product.features.map((feature, index) => (
                       <li key={index} className="flex items-center text-slate-600 dark:text-slate-400">
-                        <span className="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>
+                        <span className="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
                         {feature}
                       </li>
                     ))}

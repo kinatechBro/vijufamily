@@ -10,47 +10,102 @@ const Activities: React.FC = () => {
   const activities = [
     {
       id: 1,
-      title: 'Annual Quality Excellence Awards',
-      description: 'Recognizing outstanding performance in quality control and product innovation across all departments.',
-      date: '2024-03-15',
-      location: 'Lagos Head Office',
-      participants: 150,
-      duration: '4 hours',
+      title: "Viju Milk Continues LongStanding Children's Day Tradition with 'Celebrate Their Brilliance' Campaign Across Lagos and Ogun States",
+      description: "As part of its enduring commitment to community development and children's welfare, Viju Milk celebrated Children's Day with special events across Lagos and Ogun States.",
+      date: '2025-05-28',
+      location: 'Lagos and Ogun States',
+      participants: 500,
+      duration: '1 day',
       image: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800',
-      status: 'upcoming'
+      status: 'completed'
     },
     {
       id: 2,
-      title: 'Community Health & Nutrition Workshop',
-      description: 'Educational workshop for local communities about nutrition and healthy beverage choices.',
-      date: '2024-02-20',
-      location: 'Community Center, Lagos',
-      participants: 200,
+      title: "Children's Day Celebration",
+      description: "In the spirit of Children's Day, Viju Milk is proud to announce its annual celebration dedicated to the joy and development of children in our communities.",
+      date: '2024-06-05',
+      location: 'Community Centers, Lagos',
+      participants: 350,
       duration: '6 hours',
       image: 'https://images.pexels.com/photos/1128678/pexels-photo-1128678.jpeg?auto=compress&cs=tinysrgb&w=800',
       status: 'completed'
     },
     {
       id: 3,
-      title: 'Employee Training Program',
-      description: 'Comprehensive training on new production technologies and safety protocols.',
-      date: '2024-01-10',
-      location: 'Training Center, Lagos',
-      participants: 80,
-      duration: '8 hours',
+      title: 'Viju Spreads Joy This Holiday Season: Donates Products to Schools and NGOs for Christmas Celebrations',
+      description: 'In the spirit of spreading joy and fostering community spirit, Viju donated products to schools and NGOs for Christmas celebrations.',
+      date: '2023-12-12',
+      location: 'Various Schools and NGOs',
+      participants: 1000,
+      duration: '2 weeks',
       image: 'https://images.pexels.com/photos/1435735/pexels-photo-1435735.jpeg?auto=compress&cs=tinysrgb&w=800',
       status: 'completed'
     },
     {
       id: 4,
-      title: 'Sustainability Initiative Launch',
-      description: 'Launching our new eco-friendly packaging and sustainable production practices.',
-      date: '2024-04-05',
-      location: 'All Facilities',
+      title: "Children's Day Celebration",
+      description: "In line with the international children's day, Viju joined in celebrating and supporting children across our communities.",
+      date: '2023-05-26',
+      location: 'Multiple Locations',
       participants: 300,
-      duration: '2 days',
+      duration: '1 day',
       image: 'https://images.pexels.com/photos/248412/pexels-photo-248412.jpeg?auto=compress&cs=tinysrgb&w=800',
-      status: 'upcoming'
+      status: 'completed'
+    },
+    {
+      id: 5,
+      title: "African's Most Preferred Premium Healthy Drinking Table Water Brand of The Year 2022",
+      description: "The starting point of all achievements is desire. We are proud to be recognized as Africa's most preferred premium healthy drinking table water brand.",
+      date: '2022-08-15',
+      location: 'Lagos, Nigeria',
+      participants: 200,
+      duration: 'Award Ceremony',
+      image: 'https://images.pexels.com/photos/327090/pexels-photo-327090.jpeg?auto=compress&cs=tinysrgb&w=800',
+      status: 'completed'
+    },
+    {
+      id: 6,
+      title: "The Most Reliable Premium Bottle Water Brand of the Year",
+      description: "The starting point of all achievements is desire. Viju Industries received recognition as the most reliable premium bottle water brand of the year.",
+      date: '2022-05-10',
+      location: 'Lagos, Nigeria',
+      participants: 150,
+      duration: 'Award Ceremony',
+      image: 'https://images.pexels.com/photos/1000084/pexels-photo-1000084.jpeg?auto=compress&cs=tinysrgb&w=800',
+      status: 'completed'
+    },
+    {
+      id: 7,
+      title: "V-Smartic Wheat Milk Drink and V-Joy Chocolate Milk Drink",
+      description: "Viju Industries Nigeria Limited has introduced a new range of delicious and nutritious milk drinks: V-Smartic wheat milk and V-Joy chocolate milk.",
+      date: '2020-07-19',
+      location: 'Nationwide',
+      participants: 500,
+      duration: 'Product Launch',
+      image: 'https://images.pexels.com/photos/5946650/pexels-photo-5946650.jpeg?auto=compress&cs=tinysrgb&w=800',
+      status: 'completed'
+    },
+    {
+      id: 8,
+      title: "VIJU EDUCATIONAL TOUR (EXCURSION)",
+      description: "Viju Educational Tour (Excursion) 2020 kicks off in February, providing educational opportunities and facility tours for students.",
+      date: '2020-07-19',
+      location: 'Viju Industries Facilities',
+      participants: 300,
+      duration: 'Ongoing Program',
+      image: 'https://images.pexels.com/photos/3769981/pexels-photo-3769981.jpeg?auto=compress&cs=tinysrgb&w=800',
+      status: 'completed'
+    },
+    {
+      id: 9,
+      title: "Viju Milk Support Lagos and Ogun State Government Fight Against COVID-19",
+      description: "Viju Industries (Nigeria) Limited, a leading player in the dairy industry, supported Lagos and Ogun State Governments in the fight against COVID-19.",
+      date: '2020-07-19',
+      location: 'Lagos and Ogun States',
+      participants: 'Widespread',
+      duration: 'COVID-19 Relief Period',
+      image: 'https://images.pexels.com/photos/3951628/pexels-photo-3951628.jpeg?auto=compress&cs=tinysrgb&w=800',
+      status: 'completed'
     }
   ];
 
@@ -72,7 +127,7 @@ const Activities: React.FC = () => {
   return (
     <div className="pt-16">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-red-50 to-orange-50">
+      <section className="py-20 bg-gradient-to-br from-red-50 to-red-100">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -115,7 +170,7 @@ const Activities: React.FC = () => {
                     />
                     <div className={`absolute top-4 right-4 px-3 py-1 rounded-full text-sm font-semibold ${
                       activity.status === 'upcoming' 
-                        ? 'bg-orange-500 text-white' 
+                        ? 'bg-red-500 text-white' 
                         : 'bg-green-500 text-white'
                     }`}>
                       {activity.status === 'upcoming' ? 'Upcoming' : 'Completed'}

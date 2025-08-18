@@ -65,7 +65,7 @@ const Products: React.FC = () => {
   return (
     <div className="pt-16">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-red-50 to-orange-50 dark:from-gray-900 dark:to-gray-800">
+      <section className="py-20 bg-gradient-to-br from-red-50 to-red-100 dark:from-gray-900 dark:to-gray-800">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -77,7 +77,7 @@ const Products: React.FC = () => {
               Our Products
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-400 mb-8">
-              Discover our premium range of juices, beverages, and dairy products
+              Discover our premium range of beverages and dairy products
             </p>
           </motion.div>
         </div>
@@ -129,13 +129,13 @@ const Products: React.FC = () => {
               <div className="flex border border-slate-200 dark:border-slate-700 rounded-lg overflow-hidden">
                 <button
                   onClick={() => setViewMode('grid')}
-                  className={`p-3 ${viewMode === 'grid' ? 'bg-orange-500 text-white' : 'bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-400'}`}
+                  className={`p-3 ${viewMode === 'grid' ? 'bg-red-500 text-white' : 'bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-400'}`}
                 >
                   <Grid className="w-4 h-4" />
                 </button>
                 <button
                   onClick={() => setViewMode('list')}
-                  className={`p-3 ${viewMode === 'list' ? 'bg-orange-500 text-white' : 'bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-400'}`}
+                  className={`p-3 ${viewMode === 'list' ? 'bg-red-500 text-white' : 'bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-400'}`}
                 >
                   <List className="w-4 h-4" />
                 </button>

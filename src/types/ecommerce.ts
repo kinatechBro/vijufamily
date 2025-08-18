@@ -4,7 +4,7 @@ export interface Product {
   description: string;
   image: string;
   images?: string[];
-  category: 'juices' | 'beverages' | 'dairy';
+  category: 'beverages' | 'dairy';
   price: number;
   originalPrice?: number;
   discount?: number;
