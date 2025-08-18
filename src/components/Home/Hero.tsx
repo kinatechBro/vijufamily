@@ -128,7 +128,7 @@ const Hero: React.FC = () => {
             </motion.div>
 
             {/* Main Heading with typing animation */}
-            <div className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 md:mb-6 leading-tight">
+            <div className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-white mb-6 leading-tight">
               <div className="block">
                 <TypewriterText 
                   text="Producing Quality" 
@@ -138,7 +138,7 @@ const Hero: React.FC = () => {
                 />
               </div>
               {showSubtitle && (
-                <div className="block mt-2">
+                <div className="block">
                   <TypewriterText 
                     text="Beverages" 
                     delay={200}
@@ -148,7 +148,7 @@ const Hero: React.FC = () => {
                       setTimeout(() => setShowButtons(true), 500);
                     }}
                   />
-                  <span className="text-white text-2xl sm:text-3xl md:text-5xl lg:text-6xl"> & </span>
+                  <span className="text-white"> & </span>
                   <TypewriterText 
                     text="Dairy" 
                     delay={1000}
@@ -161,13 +161,12 @@ const Hero: React.FC = () => {
 
             {/* Subtitle with typing animation */}
             {showSubtitle && (
-              <div className="text-base sm:text-lg md:text-xl lg:text-2xl text-slate-200 mb-6 md:mb-8 max-w-2xl md:max-w-3xl mx-auto lg:mx-0 leading-relaxed px-2 md:px-0">
+              <div className="text-xl md:text-2xl text-slate-200 mb-8 max-w-3xl mx-auto lg:mx-0 leading-relaxed">
                 <TypewriterText 
                   text="Leading the industry with premium refreshing beverages and pure dairy products."
                   delay={1500}
                   speed={40}
                 />
-                <br className="hidden sm:block" />
                 <span className="hidden sm:inline">
                   <TypewriterText 
                     text=" Experience the taste of excellence with every sip."
