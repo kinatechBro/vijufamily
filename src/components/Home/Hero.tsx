@@ -58,9 +58,9 @@ const Hero: React.FC = () => {
           backgroundImage: 'url(/assets/slider_images/slider_2.jpeg)',
         }}
       >
-        {/* Enhanced mobile-optimized overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-slate-800/80 to-slate-900/70 md:from-slate-900/90 md:via-slate-800/70 md:to-slate-900/50 dark:from-black/98 dark:via-black/85 dark:to-black/75"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent md:from-slate-900/80"></div>
+        {/* Enhanced mobile-optimized overlay with darker left side */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/95 to-slate-900/80 md:from-black md:via-black/95 md:to-slate-900/70 dark:from-black dark:via-black/95 dark:to-black/80"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-slate-900/50 to-transparent md:from-black md:via-slate-900/60"></div>
       </motion.div>
 
       {/* Enhanced Floating Elements with Mobile Responsiveness */}

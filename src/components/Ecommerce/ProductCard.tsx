@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ShoppingCart, Heart, Star, Eye, Zap, Sparkles, TrendingUp } from 'lucide-react';
+import { ShoppingCart, Heart, Eye, Zap, Sparkles, TrendingUp } from 'lucide-react';
 import { Product } from '../../types/ecommerce';
 import { useCartStore } from '../../store/cartStore';
 import { useUserStore } from '../../store/userStore';
 import { Link } from 'react-router-dom';
-import Badge from '../UI/Badge';
-import Button from '../UI/Button';
 
 interface ProductCardProps {
   product: Product;
@@ -230,32 +228,6 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, index = 0 }) => {
               {product.title}
             </motion.h3>
 
-            {/* Rating with Enhanced Stars */}
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-2">
-                <div className="flex items-center">
-                  {[...Array(5)].map((_, i) => (
-                    <motion.div
-                      key={i}
-                      whileHover={{ scale: 1.2, rotate: 12 }}
-                      transition={{ duration: 0.2 }}
-                    >
-                      <Star
-                        className={`w-4 h-4 ${
-                          i < Math.floor(product.rating)
-                            ? 'text-yellow-400 fill-current'
-                            : 'text-slate-300 dark:text-slate-600'
-                        }`}
-                      />
-                    </motion.div>
-                  ))}
-                </div>
-                <span className="text-sm font-medium text-slate-600 dark:text-slate-400">
-                  {product.rating} ({product.reviews})
-                </span>
-              </div>
-            </div>
-
             {/* Stock Status Section */}
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
@@ -274,24 +246,6 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, index = 0 }) => {
                 )}
               </div>
             </div>
-
-            {/* Enhanced Features Tags */}
-            {product.features && product.features.length > 0 && (
-              <div className="flex flex-wrap gap-2">
-                {product.features.slice(0, 3).map((feature, idx) => (
-                  <motion.span
-                    key={idx}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.3, delay: idx * 0.1 }}
-                    whileHover={{ scale: 1.05 }}
-                    className="text-xs px-3 py-1.5 bg-gradient-to-r from-slate-100 to-slate-200 dark:from-slate-700 dark:to-slate-600 text-slate-700 dark:text-slate-300 rounded-full font-medium border border-slate-200 dark:border-slate-600"
-                  >
-                    {feature}
-                  </motion.span>
-                ))}
-              </div>
-            )}
           </div>
         </Link>
       </motion.div>
