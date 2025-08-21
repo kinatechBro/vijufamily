@@ -226,7 +226,7 @@ const ProductCategories: React.FC = () => {
                 className="text-xl md:text-2xl text-red-100 mb-10 max-w-3xl mx-auto leading-relaxed"
               >
                 Explore our complete product range and discover why thousands of customers 
-                trust Viju Family for their beverage and dairy needs.
+                trust Viju Industries (Nigeria) Limited for their beverage and dairy needs.
               </motion.p>
               
               <motion.div

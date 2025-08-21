@@ -108,7 +108,7 @@ const Header: React.FC = () => {
             <Link 
               to="/" 
               className="flex items-center space-x-4 group relative z-10"
-              aria-label="Viju Family Home"
+              aria-label="Viju Industries (Nigeria) Limited Home"
             >
               <motion.div 
                 className="relative"
@@ -118,7 +118,7 @@ const Header: React.FC = () => {
                 <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center shadow-xl relative overflow-hidden border-2 border-orange-200">
                   <img 
                     src="/assets/viju_logo.png" 
-                    alt="Viju Family Logo" 
+                    alt="Viju Industries (Nigeria) Limited Logo" 
                     className="w-10 h-10 object-contain relative z-10"
                   />
                   <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent"></div>
@@ -136,7 +136,7 @@ const Header: React.FC = () => {
                   } group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-red-600 group-hover:to-orange-500`}
                   whileHover={{ scale: 1.02 }}
                 >
-                  Viju Family
+                  Viju Industries (Nigeria) Limited
                 </motion.span>
                 <span className={`text-sm font-medium transition-colors duration-300 ${
                   scrolled 

@@ -73,7 +73,7 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onLoadingComplete }) => {
               >
                 <img 
                   src="/assets/viju_logo.png" 
-                  alt="Viju Family Logo" 
+                  alt="Viju Industries (Nigeria) Limited Logo" 
                   className="w-20 h-20 object-contain"
                 />
                 <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent rounded-full"></div>
@@ -88,7 +88,7 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onLoadingComplete }) => {
               className="text-center space-y-2"
             >
               <h1 className="text-4xl md:text-5xl font-black bg-gradient-to-r from-red-600 via-orange-500 to-red-500 bg-clip-text text-transparent">
-                Viju Family
+                Viju Industries (Nigeria) Limited
               </h1>
               <p className="text-lg text-gray-600 dark:text-gray-300 font-medium">
                 Premium Quality

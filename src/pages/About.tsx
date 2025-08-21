@@ -70,7 +70,7 @@ const About: React.FC = () => {
                 >
                   <span className="block text-gray-900 dark:text-white">About</span>
                   <span className="block bg-gradient-to-r from-red-600 via-orange-500 to-red-500 bg-clip-text text-transparent animate-pulse">
-                    Viju Family
+                    Viju Industries (Nigeria) Limited
                   </span>
                 </motion.h1>
 

@@ -64,7 +64,7 @@ const ContactForm: React.FC = () => {
     {
       icon: Mail,
       title: 'Send Email',
-      primary: 'info@vijufamily.com',
+      primary: 'info@vijuindustries.com',
       secondary: 'We respond within 24 hours',
       gradient: 'from-red-600 to-red-400',
       glowColor: 'red'
@@ -138,7 +138,7 @@ const ContactForm: React.FC = () => {
                 transition={{ duration: 1, delay: 0.7 }}
                 className="text-xl md:text-2xl text-gray-700 dark:text-white/80 leading-relaxed max-w-3xl mx-auto font-light"
               >
-                Ready to experience the Viju Family difference? We're here to answer your questions, discuss partnerships, and help you discover our premium product range.
+                Ready to experience the Viju Industries (Nigeria) Limited difference? We're here to answer your questions, discuss partnerships, and help you discover our premium product range.
               </motion.p>
             </div>
 
@@ -275,7 +275,7 @@ const ContactForm: React.FC = () => {
                     Message Sent Successfully!
                   </h3>
                   <p className="text-lg text-gray-600 dark:text-gray-400 mb-8 max-w-lg mx-auto">
-                    Thank you for reaching out to Viju Family. Our team will review your message and respond within 24 hours.
+                    Thank you for reaching out to Viju Industries (Nigeria) Limited. Our team will review your message and respond within 24 hours.
                   </p>
                   <motion.button
                     onClick={() => contactMutation.reset()}
@@ -389,7 +389,7 @@ const ContactForm: React.FC = () => {
                       className="p-6 bg-red-50/80 dark:bg-red-900/20 backdrop-blur-xl border-2 border-red-200/50 dark:border-red-800/50 rounded-2xl"
                     >
                       <p className="text-red-600 dark:text-red-400 font-medium">
-                        Failed to send message. Please try again or contact us directly at info@vijufamily.com
+                        Failed to send message. Please try again or contact us directly at info@vijuindustries.com
                       </p>
                     </motion.div>
                   )}
@@ -458,7 +458,7 @@ const ContactForm: React.FC = () => {
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 className="rounded-2xl"
-                title="Viju Family Industries Location"
+                title="Viju Industries (Nigeria) Limited Location"
               ></iframe>
               
               {/* Overlay with company info */}
@@ -468,7 +468,7 @@ const ContactForm: React.FC = () => {
                     <MapPin className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-gray-900 dark:text-white text-sm">Viju Family Industries</h3>
+                    <h3 className="font-bold text-gray-900 dark:text-white text-sm">Viju Industries (Nigeria) Limited</h3>
                     <p className="text-xs text-gray-600 dark:text-gray-400 max-w-48">
                       1, Awose close Awosika Avenue, Off Sapara Street, Ikeja Industrial Estate
                     </p>

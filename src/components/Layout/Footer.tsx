@@ -13,11 +13,11 @@ const Footer: React.FC = () => {
               <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center p-1">
                 <img 
                   src="/assets/viju_logo.png" 
-                  alt="Viju Family Logo" 
+                  alt="Viju Industries (Nigeria) Limited Logo" 
                   className="w-full h-full object-contain"
                 />
               </div>
-              <span className="text-xl font-bold">Viju Family</span>
+              <span className="text-xl font-bold">Viju Industries (Nigeria) Limited</span>
             </div>
             <p className="text-gray-300 text-sm">
               Leading manufacturer of premium beverages and dairy products. 
@@ -99,7 +99,7 @@ const Footer: React.FC = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4 text-red-500 flex-shrink-0" />
-                <span className="text-gray-300">info@vijufamily.com</span>
+                <span className="text-gray-300">info@vijuindustries.com</span>
               </div>
             </div>
           </div>

@@ -118,7 +118,7 @@ const Vacancies: React.FC = () => {
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-600 mb-12 font-light leading-relaxed max-w-3xl mx-auto">
-              Join Viju Family's industrial power generation team in Nigeria and build the future of reliable energy solutions
+              Join Viju Industries (Nigeria) Limited's industrial power generation team in Nigeria and build the future of reliable energy solutions
             </p>
 
             {/* Stats cards */}
@@ -357,7 +357,7 @@ const Vacancies: React.FC = () => {
               <div className="bg-white/80 backdrop-blur-sm rounded-xl p-4 border border-white/50">
                 <div className="flex items-center justify-center space-x-2 mb-2">
                   <div className="w-2 h-2 rounded-full bg-gradient-to-r from-red-400 to-orange-400"></div>
-                  <p className="font-bold text-gray-900">jonathanogbone@vijufamily.com</p>
+                  <p className="font-bold text-gray-900">jonathanogbone@vijuindustries.com</p>
                   <div className="w-2 h-2 rounded-full bg-gradient-to-r from-red-400 to-orange-400"></div>
                 </div>
                 <p className="text-sm text-gray-600 text-center">
@@ -378,7 +378,7 @@ const Vacancies: React.FC = () => {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 onClick={() => {
-                  window.location.href = `mailto:jonathanogbone@vijufamily.com?subject=Application for ${selectedVacancy.title}`;
+                  window.location.href = `mailto:jonathanogbone@vijuindustries.com?subject=Application for ${selectedVacancy.title}`;
                   setSelectedVacancy(null);
                 }}
                 className="flex-1 bg-gradient-to-r from-red-500 via-orange-500 to-red-600 text-white px-6 py-3 rounded-2xl hover:from-red-600 hover:via-orange-600 hover:to-red-700 transition-all duration-300 font-bold flex items-center justify-center shadow-lg hover:shadow-xl"
