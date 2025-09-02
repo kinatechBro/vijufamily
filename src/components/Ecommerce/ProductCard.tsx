@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ShoppingCart, Heart, Eye, Zap, Sparkles, TrendingUp } from 'lucide-react';
+import { Heart, Eye, Zap, Sparkles, TrendingUp, Star } from 'lucide-react';
 import { Product } from '../../types/ecommerce';
-import { useCartStore } from '../../store/cartStore';
 import { useUserStore } from '../../store/userStore';
 import { Link } from 'react-router-dom';
 
@@ -13,15 +12,10 @@ interface ProductCardProps {
 
 const ProductCard: React.FC<ProductCardProps> = ({ product, index = 0 }) => {
   const [isHovered, setIsHovered] = useState(false);
-  const { addItem } = useCartStore();
+
+  // Removed add-to-cart functionality as per requirements
   const { addToWishlist, removeFromWishlist, isInWishlist } = useUserStore();
   const inWishlist = isInWishlist(product.id);
-
-  const handleAddToCart = (e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
-    addItem(product);
-  };
 
   const handleWishlistToggle = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -178,24 +172,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, index = 0 }) => {
               </motion.button>
             </motion.div>
 
-            {/* Floating Add to Cart */}
-            <motion.div 
-              className="absolute bottom-4 left-4 right-4"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: isHovered ? 1 : 0, y: isHovered ? 0 : 20 }}
-              transition={{ duration: 0.3 }}
-            >
-              <motion.button
-                onClick={handleAddToCart}
-                disabled={product.stock === 0}
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="w-full py-3 px-4 bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 hover:from-orange-600 hover:via-red-600 hover:to-pink-600 text-white font-semibold rounded-2xl backdrop-blur-xl border border-white/20 shadow-lg transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
-              >
-                <ShoppingCart className="w-4 h-4" />
-                {product.stock === 0 ? 'Sold Out' : 'Add to Cart'}
-              </motion.button>
-            </motion.div>
+            {/* Add to Cart removed as per requirements */}
           </div>
 
           {/* Content Section with Enhanced Typography */}
@@ -220,32 +197,82 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, index = 0 }) => {
               )}
             </div>
 
-            {/* Title with Advanced Typography */}
+            {/* Title with Advanced Typography - show full name */}
             <motion.h3 
-              className="font-bold text-lg text-slate-900 dark:text-white line-clamp-2 leading-tight group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors duration-300"
+              className="font-bold text-lg text-slate-900 dark:text-white leading-tight group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors duration-300"
               whileHover={{ scale: 1.02 }}
             >
               {product.title}
             </motion.h3>
 
-            {/* Stock Status Section */}
+            {/* Product Description */}
+            <p className="text-sm text-slate-600 dark:text-slate-400 line-clamp-2 leading-relaxed">
+              {product.description}
+            </p>
+
+            {/* Rating Stars - Interactive for rating */}
+            <div className="flex items-center gap-2">
+              <div className="flex items-center gap-1">
+                {[1, 2, 3, 4, 5].map((star) => (
+                  <Star
+                    key={star}
+                    className={`w-4 h-4 ${
+                      star <= Math.floor(product.rating)
+                        ? 'text-yellow-400 fill-current'
+                        : star === Math.ceil(product.rating) && product.rating % 1 !== 0
+                        ? 'text-yellow-400 fill-current opacity-50'
+                        : 'text-slate-300 dark:text-slate-600'
+                    }`}
+                  />
+                ))}
+              </div>
+              <span className="text-sm text-slate-600 dark:text-slate-400">
+                {product.rating} ({product.reviews} reviews)
+              </span>
+            </div>
+
+            {/* Price Information */}
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
-                {product.stock > 0 ? (
-                  <div className="flex items-center gap-1.5">
-                    <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-                    <span className="text-sm font-medium text-green-600 dark:text-green-400">
-                      {product.stock < 10 ? `${product.stock} left` : 'In Stock'}
-                    </span>
-                  </div>
-                ) : (
-                  <div className="flex items-center gap-1.5">
-                    <div className="w-2 h-2 bg-red-500 rounded-full" />
-                    <span className="text-sm font-medium text-red-600 dark:text-red-400">Out of Stock</span>
-                  </div>
+                <span className="text-2xl font-bold text-slate-900 dark:text-white">
+                  ₦{product.price}
+                </span>
+                {product.originalPrice && product.originalPrice > product.price && (
+                  <span className="text-sm text-slate-500 dark:text-slate-400 line-through">
+                    ₦{product.originalPrice}
+                  </span>
                 )}
               </div>
+              {product.stock > 0 ? (
+                <div className="flex items-center gap-1.5">
+                  <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+                  <span className="text-sm font-medium text-green-600 dark:text-green-400">
+                    {product.stock < 10 ? `${product.stock} left` : 'In Stock'}
+                  </span>
+                </div>
+              ) : (
+                <div className="flex items-center gap-1.5">
+                  <div className="w-2 h-2 bg-red-500 rounded-full" />
+                  <span className="text-sm font-medium text-red-600 dark:text-red-400">Out of Stock</span>
+                </div>
+              )}
             </div>
+
+            {/* Product Features (No nutritional info) */}
+            {product.features && product.features.length > 0 && (
+              <div className="flex flex-wrap gap-1">
+                {product.features.slice(0, 3).map((feature, index) => (
+                  <span
+                    key={index}
+                    className="px-2 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-xs rounded-md"
+                  >
+                    {feature}
+                  </span>
+                ))}
+              </div>
+            )}
+
+            {/* Stock Status Section (optional, left as is) */}
           </div>
         </Link>
       </motion.div>

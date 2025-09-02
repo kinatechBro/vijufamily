@@ -4,8 +4,7 @@ import { motion } from 'framer-motion';
 import { 
   Star, 
   ChevronLeft,
-  Share2,
-  Info
+  Share2
 } from 'lucide-react';
 import { products } from '../data/products';
 import Button from '../components/UI/Button';
@@ -237,103 +236,6 @@ const ProductDetail: React.FC = () => {
               >
                 Share Product
               </Button>
-            </div>
-
-            {/* Product Information */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 py-6 border-t border-slate-200 dark:border-slate-700">
-              <div>
-                <h4 className="font-semibold text-slate-900 dark:text-white mb-3">Product Details</h4>
-                <div className="space-y-2 text-sm">
-                  <div className="flex justify-between">
-                    <span className="text-slate-600 dark:text-slate-400">Brand:</span>
-                    <span className="font-medium">{product.brand}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-slate-600 dark:text-slate-400">SKU:</span>
-                    <span className="font-medium">{product.sku}</span>
-                  </div>
-                  {product.weight && (
-                    <div className="flex justify-between">
-                      <span className="text-slate-600 dark:text-slate-400">Weight:</span>
-                      <span className="font-medium">{product.weight}</span>
-                    </div>
-                  )}
-                  <div className="flex justify-between">
-                    <span className="text-slate-600 dark:text-slate-400">Category:</span>
-                    <span className="font-medium capitalize">{product.category}</span>
-                  </div>
-                </div>
-              </div>
-              
-              {product.features && product.features.length > 0 && (
-                <div>
-                  <h4 className="font-semibold text-slate-900 dark:text-white mb-3">Key Features</h4>
-                  <ul className="space-y-2 text-sm">
-                    {product.features.map((feature, index) => (
-                      <li key={index} className="flex items-center gap-2">
-                        <div className="w-2 h-2 bg-red-500 rounded-full"></div>
-                        <span className="text-slate-600 dark:text-slate-400">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-            </div>
-          </div>
-        </div>
-
-        {/* Product Details Tabs */}
-        <div className="mt-16">
-          <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {/* Features */}
-              {product.features && (
-                <div>
-                  <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-4 flex items-center">
-                    <Info className="w-5 h-5 mr-2 text-orange-500" />
-                    Features
-                  </h3>
-                  <ul className="space-y-2">
-                    {product.features.map((feature, index) => (
-                      <li key={index} className="flex items-center text-slate-600 dark:text-slate-400">
-                        <span className="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-
-              {/* Nutritional Info */}
-              {product.nutritionalInfo && (
-                <div>
-                  <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-4">
-                    Nutritional Information (per 100ml)
-                  </h3>
-                  <div className="space-y-2">
-                    <div className="flex justify-between">
-                      <span className="text-slate-600 dark:text-slate-400">Calories</span>
-                      <span className="font-medium">{product.nutritionalInfo.calories} kcal</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-slate-600 dark:text-slate-400">Protein</span>
-                      <span className="font-medium">{product.nutritionalInfo.protein}g</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-slate-600 dark:text-slate-400">Carbohydrates</span>
-                      <span className="font-medium">{product.nutritionalInfo.carbs}g</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-slate-600 dark:text-slate-400">Fat</span>
-                      <span className="font-medium">{product.nutritionalInfo.fat}g</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-slate-600 dark:text-slate-400">Sugar</span>
-                      <span className="font-medium">{product.nutritionalInfo.sugar}g</span>
-                    </div>
-                  </div>
-                </div>
-              )}
             </div>
           </div>
         </div>
