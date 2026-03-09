@@ -118,6 +118,9 @@ const Vacancies: React.FC = () => {
       requirements: [
         "Familiar with injection molding processes for PE, PET, PP plastic bottles",
         "Hands-on and maintenance experience with large injection molding machines",
+        "Over 5 years of maintenance and operational experience with natural gas or diesel generators rated above 800KW",
+        "Familiar with bottled water production processes and workflows",
+        "Able to independently manage the entire bottled water production line",
         "Organize production according to established production and quality standards",
       ],
       responsibilities: [],
@@ -132,6 +135,9 @@ const Vacancies: React.FC = () => {
       description:
         "We are seeking a PET Water Line Production Manager to oversee our PET bottled water production operations at our Igbesa facility.",
       requirements: [
+        "Familiar with injection molding processes for PE, PET, PP plastic bottles",
+        "Hands-on and maintenance experience with large injection molding machines",
+        "Over 5 years of maintenance and operational experience with natural gas or diesel generators rated above 800KW",
         "Familiar with bottled water production processes and workflows",
         "Able to independently manage the entire bottled water production line",
         "Organize production according to established production and quality standards",
@@ -150,6 +156,9 @@ const Vacancies: React.FC = () => {
       requirements: [
         "Familiar with injection molding processes for PE, PET, PP plastic bottles",
         "Hands-on and maintenance experience with large injection molding machines",
+        "Over 5 years of maintenance and operational experience with natural gas or diesel generators rated above 800KW",
+        "Familiar with bottled water production processes and workflows",
+        "Able to independently manage the entire bottled water production line",
         "Organize production according to established production and quality standards",
       ],
       responsibilities: [],
@@ -166,6 +175,9 @@ const Vacancies: React.FC = () => {
       requirements: [
         "Familiar with injection molding processes for PE, PET, PP plastic bottles",
         "Hands-on and maintenance experience with large injection molding machines",
+        "Over 5 years of maintenance and operational experience with natural gas or diesel generators rated above 800KW",
+        "Familiar with bottled water production processes and workflows",
+        "Able to independently manage the entire bottled water production line",
         "Organize production according to established production and quality standards",
       ],
       responsibilities: [],
@@ -180,8 +192,11 @@ const Vacancies: React.FC = () => {
       description:
         "We are looking for an experienced Generator Technician to maintain and operate our power generation equipment at the Igbesa facility.",
       requirements: [
+        "Familiar with injection molding processes for PE, PET, PP plastic bottles",
+        "Hands-on and maintenance experience with large injection molding machines",
         "Over 5 years of maintenance and operational experience with natural gas or diesel generators rated above 800KW",
         "Familiar with bottled water production processes and workflows",
+        "Able to independently manage the entire bottled water production line",
         "Organize production according to established production and quality standards",
       ],
       responsibilities: [],
@@ -196,9 +211,12 @@ const Vacancies: React.FC = () => {
       description:
         "We are seeking a Female Financial Assistant to support our finance department at the Igbesa facility.",
       requirements: [
-        "Familiar with accounting and financial processes",
-        "Able to work independently and manage financial documentation",
-        "Organize work according to established standards",
+        "Familiar with injection molding processes for PE, PET, PP plastic bottles",
+        "Hands-on and maintenance experience with large injection molding machines",
+        "Over 5 years of maintenance and operational experience with natural gas or diesel generators rated above 800KW",
+        "Familiar with bottled water production processes and workflows",
+        "Able to independently manage the entire bottled water production line",
+        "Organize production according to established production and quality standards",
       ],
       responsibilities: [],
       postedDate: "2026-03-09",
@@ -212,6 +230,9 @@ const Vacancies: React.FC = () => {
       description:
         "We are looking for a Tetra Pack Line Operator to manage our Tetra Pack production line at the Igbesa facility.",
       requirements: [
+        "Familiar with injection molding processes for PE, PET, PP plastic bottles",
+        "Hands-on and maintenance experience with large injection molding machines",
+        "Over 5 years of maintenance and operational experience with natural gas or diesel generators rated above 800KW",
         "Familiar with bottled water production processes and workflows",
         "Able to independently manage the entire bottled water production line",
         "Organize production according to established production and quality standards",
@@ -229,10 +250,9 @@ const Vacancies: React.FC = () => {
       description:
         "We are seeking a Labeling Machine Operator for our Ikeja facility to operate and maintain labeling equipment.",
       requirements: [
-        "Hands-on operation and maintenance experience with labeling machine",
-        "Able to independently perform upkeep and repair",
-        "Responsible, detail-oriented, with good teamwork and communication skills",
-        "Able to adapt to the fast pace of production environments",
+        "Hands-on operation and maintenance experience with labeling machine, able to independently perform upkeep and repair",
+        "Over 3 years of hands-on operation and maintenance experience with fully automatic blow-fill-seal equipment (such as Krones, Sidel), with required knowledge in electrical systems",
+        "Responsible, detail-oriented, with good teamwork and communication skills, and able to adapt to the fast pace of production environments",
       ],
       responsibilities: [],
       postedDate: "2026-03-09",
@@ -246,10 +266,9 @@ const Vacancies: React.FC = () => {
       description:
         "We are looking for a Blow-Fill-Seal Machine Operator to operate our BFS equipment at the Ikeja facility.",
       requirements: [
-        "Over 3 years of hands-on operation and maintenance experience with fully automatic blow-fill-seal equipment (such as Krones, Sidel)",
-        "Required knowledge in electrical systems",
-        "Responsible, detail-oriented, with good teamwork and communication skills",
-        "Able to adapt to the fast pace of production environments",
+        "Hands-on operation and maintenance experience with labeling machine, able to independently perform upkeep and repair",
+        "Over 3 years of hands-on operation and maintenance experience with fully automatic blow-fill-seal equipment (such as Krones, Sidel), with required knowledge in electrical systems",
+        "Responsible, detail-oriented, with good teamwork and communication skills, and able to adapt to the fast pace of production environments",
       ],
       responsibilities: [],
       postedDate: "2026-03-09",
@@ -263,10 +282,9 @@ const Vacancies: React.FC = () => {
       description:
         "We are seeking a Packaging Machine Operator for our Ikeja facility to operate packaging equipment.",
       requirements: [
-        "Hands-on operation and maintenance experience with packaging machines",
-        "Able to independently perform upkeep and repair",
-        "Responsible, detail-oriented, with good teamwork and communication skills",
-        "Able to adapt to the fast pace of production environments",
+        "Hands-on operation and maintenance experience with labeling machine, able to independently perform upkeep and repair",
+        "Over 3 years of hands-on operation and maintenance experience with fully automatic blow-fill-seal equipment (such as Krones, Sidel), with required knowledge in electrical systems",
+        "Responsible, detail-oriented, with good teamwork and communication skills, and able to adapt to the fast pace of production environments",
       ],
       responsibilities: [],
       postedDate: "2026-03-09",
