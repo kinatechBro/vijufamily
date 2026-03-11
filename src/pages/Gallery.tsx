@@ -82,10 +82,6 @@ const Gallery: React.FC = () => {
           alt: "Performance Excellence",
         },
         {
-          src: "/assets/Gallery/Benevolence Talent Show by NOKT Record/DSC_4068.jpg",
-          alt: "Benevolence Event",
-        },
-        {
           src: "/assets/Gallery/Benevolence Talent Show by NOKT Record/DSC_4188.jpg",
           alt: "Talent Showcase",
         },
@@ -100,34 +96,6 @@ const Gallery: React.FC = () => {
         {
           src: "/assets/Gallery/Benevolence Talent Show by NOKT Record/DSC_4286.jpg",
           alt: "Talent Display",
-        },
-        {
-          src: "/assets/Gallery/Benevolence Talent Show by NOKT Record/DSC_4394.jpg",
-          alt: "Show Excellence",
-        },
-        {
-          src: "/assets/Gallery/Benevolence Talent Show by NOKT Record/DSC_4399.jpg",
-          alt: "Musical Moment",
-        },
-        {
-          src: "/assets/Gallery/Benevolence Talent Show by NOKT Record/DSC_4411.jpg",
-          alt: "Talent Competition Final",
-        },
-        {
-          src: "/assets/Gallery/Benevolence Talent Show by NOKT Record/DSC_4548.jpg",
-          alt: "Event Celebration",
-        },
-        {
-          src: "/assets/Gallery/Benevolence Talent Show by NOKT Record/DSC_4551.jpg",
-          alt: "Performance Victory",
-        },
-        {
-          src: "/assets/Gallery/Benevolence Talent Show by NOKT Record/DSC_4554.jpg",
-          alt: "Show Conclusion",
-        },
-        {
-          src: "/assets/Gallery/Benevolence Talent Show by NOKT Record/DSC_4561.jpg",
-          alt: "Talent Show Finale",
         },
       ],
     },
