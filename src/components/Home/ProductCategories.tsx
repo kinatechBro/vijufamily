@@ -1,8 +1,15 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import { ArrowRight, Droplets, Zap, Milk, Sparkles, TrendingUp } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import {
+  ArrowRight,
+  Droplets,
+  Zap,
+  Milk,
+  Sparkles,
+  TrendingUp,
+} from "lucide-react";
+import { Link } from "react-router-dom";
 
 const ProductCategories: React.FC = () => {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
@@ -10,21 +17,23 @@ const ProductCategories: React.FC = () => {
 
   const categories = [
     {
-      id: 'beverages',
-      title: 'Mr V',
-      image: '/assets/mr_V.jpeg',
-      gradient: 'from-red-500 to-red-600',
-      glowGradient: 'from-red-500/20 to-red-600/20',
-      bgPattern: 'radial-gradient(circle at 20% 80%, rgba(220, 38, 38, 0.12) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(220, 38, 38, 0.12) 0%, transparent 50%)',
+      id: "beverages",
+      title: "Mr V Premium Hygiene water",
+      image: "/assets/mr_V.jpeg",
+      gradient: "from-red-500 to-red-600",
+      glowGradient: "from-red-500/20 to-red-600/20",
+      bgPattern:
+        "radial-gradient(circle at 20% 80%, rgba(220, 38, 38, 0.12) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(220, 38, 38, 0.12) 0%, transparent 50%)",
     },
     {
-      id: 'dairy',
-      title: 'Vigor energy drink',
-      image: '/assets/vigor_energy_drink.jpeg',
-      gradient: 'from-red-500 to-red-600',
-      glowGradient: 'from-red-500/20 to-red-600/20',
-      bgPattern: 'radial-gradient(circle at 20% 80%, rgba(239, 68, 68, 0.12) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(239, 68, 68, 0.12) 0%, transparent 50%)',
-    }
+      id: "dairy",
+      title: "Vigor energy drink",
+      image: "/assets/vigor_energy_drink.jpeg",
+      gradient: "from-red-500 to-red-600",
+      glowGradient: "from-red-500/20 to-red-600/20",
+      bgPattern:
+        "radial-gradient(circle at 20% 80%, rgba(239, 68, 68, 0.12) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(239, 68, 68, 0.12) 0%, transparent 50%)",
+    },
   ];
 
   return (
@@ -35,7 +44,7 @@ const ProductCategories: React.FC = () => {
         <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-red-200 to-red-200 dark:from-red-900/30 dark:to-red-900/30 rounded-full blur-3xl -translate-x-48 -translate-y-48" />
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-br from-red-200 to-red-200 dark:from-red-900/30 dark:to-red-900/30 rounded-full blur-3xl translate-x-48 translate-y-48" />
       </div>
-      
+
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Enhanced Header Section */}
         <motion.div
@@ -56,9 +65,9 @@ const ProductCategories: React.FC = () => {
             Our Product Range
             <TrendingUp className="w-4 h-4" />
           </motion.div>
-          
+
           {/* Main Title with Gradient */}
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.3 }}
@@ -72,14 +81,15 @@ const ProductCategories: React.FC = () => {
               Categories
             </span>
           </motion.h2>
-          
-          <motion.p 
+
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-xl md:text-2xl text-slate-600 dark:text-slate-400 max-w-4xl mx-auto leading-relaxed font-medium"
           >
-            Discover our wide range of premium products, each crafted with care and 
+            Discover our wide range of premium products, each crafted with care
+            and
             <br className="hidden md:block" />
             attention to quality, bringing you the finest taste experiences
           </motion.p>
@@ -92,12 +102,12 @@ const ProductCategories: React.FC = () => {
               key={category.id}
               initial={{ opacity: 0, y: 60, scale: 0.9 }}
               animate={inView ? { opacity: 1, y: 0, scale: 1 } : {}}
-              transition={{ 
-                duration: 0.8, 
+              transition={{
+                duration: 0.8,
                 delay: index * 0.2,
                 type: "spring",
                 stiffness: 120,
-                damping: 20
+                damping: 20,
               }}
               onHoverStart={() => setHoveredCategory(category.id)}
               onHoverEnd={() => setHoveredCategory(null)}
@@ -106,22 +116,23 @@ const ProductCategories: React.FC = () => {
               {/* Enhanced Card Container */}
               <motion.div
                 layout
-                whileHover={{ 
+                whileHover={{
                   y: -16,
-                  transition: { duration: 0.4, type: "spring", stiffness: 300 }
+                  transition: { duration: 0.4, type: "spring", stiffness: 300 },
                 }}
                 className="relative h-full bg-white/80 dark:bg-slate-800/80 backdrop-blur-2xl rounded-3xl border border-white/30 dark:border-slate-700/30 overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-700"
                 style={{
-                  background: hoveredCategory === category.id 
-                    ? category.bgPattern
-                    : undefined
+                  background:
+                    hoveredCategory === category.id
+                      ? category.bgPattern
+                      : undefined,
                 }}
               >
                 {/* Floating Glow Effect */}
                 <motion.div
                   className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"
                   style={{
-                    background: `radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), ${category.glowGradient.replace('from-', '').replace('to-', ', ')}, transparent 70%)`
+                    background: `radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), ${category.glowGradient.replace("from-", "").replace("to-", ", ")}, transparent 70%)`,
                   }}
                 />
 
@@ -132,26 +143,33 @@ const ProductCategories: React.FC = () => {
                     alt={category.title}
                     className="w-full h-full object-cover"
                     whileHover={{ scale: 1.1 }}
-                    transition={{ duration: 0.7, type: "spring", stiffness: 200 }}
+                    transition={{
+                      duration: 0.7,
+                      type: "spring",
+                      stiffness: 200,
+                    }}
                   />
-                  
+
                   {/* Simple Gradient Overlay for visibility of text */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                 </div>
-                
+
                 {/* Simplified Content Section - Only Title */}
                 <div className="p-8 relative z-10 flex justify-center items-center">
                   {/* Category Title */}
-                  <motion.h3 
+                  <motion.h3
                     className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white text-center"
                     whileHover={{ scale: 1.02 }}
                   >
                     {category.title}
                   </motion.h3>
                 </div>
-                
+
                 {/* Link to products page */}
-                <Link to={`/products?category=${category.id}`} className="absolute inset-0 z-20">
+                <Link
+                  to={`/products?category=${category.id}`}
+                  className="absolute inset-0 z-20"
+                >
                   <span className="sr-only">View {category.title}</span>
                 </Link>
               </motion.div>
@@ -173,27 +191,35 @@ const ProductCategories: React.FC = () => {
               <div className="absolute bottom-0 right-0 w-80 h-80 bg-white rounded-full blur-3xl translate-x-40 translate-y-40 animate-pulse" />
               <div className="absolute top-1/2 left-1/2 w-40 h-40 bg-white rounded-full blur-2xl -translate-x-20 -translate-y-20 animate-pulse" />
             </div>
-            
+
             {/* Floating Elements */}
             <div className="absolute inset-0 overflow-hidden">
               <motion.div
-                animate={{ 
+                animate={{
                   y: [0, -20, 0],
-                  rotate: [0, 5, 0]
+                  rotate: [0, 5, 0],
                 }}
-                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                transition={{
+                  duration: 6,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
                 className="absolute top-8 left-8 w-12 h-12 bg-white/20 rounded-2xl backdrop-blur-sm"
               />
               <motion.div
-                animate={{ 
+                animate={{
                   y: [0, 15, 0],
-                  rotate: [0, -5, 0]
+                  rotate: [0, -5, 0],
                 }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
                 className="absolute bottom-8 right-8 w-16 h-16 bg-white/20 rounded-3xl backdrop-blur-sm"
               />
             </div>
-            
+
             <div className="relative z-10">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -202,11 +228,13 @@ const ProductCategories: React.FC = () => {
                 className="flex items-center justify-center gap-3 mb-6"
               >
                 <Sparkles className="w-8 h-8" />
-                <span className="text-xl font-bold">Premium Experience Awaits</span>
+                <span className="text-xl font-bold">
+                  Premium Experience Awaits
+                </span>
                 <Sparkles className="w-8 h-8" />
               </motion.div>
-              
-              <motion.h3 
+
+              <motion.h3
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 1.3 }}
@@ -218,17 +246,18 @@ const ProductCategories: React.FC = () => {
                   Quality?
                 </span>
               </motion.h3>
-              
-              <motion.p 
+
+              <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 1.4 }}
                 className="text-xl md:text-2xl text-red-100 mb-10 max-w-3xl mx-auto leading-relaxed"
               >
-                Explore our complete product range and discover why thousands of customers 
-                trust Viju Industries (Nigeria) Limited for their beverage and dairy needs.
+                Explore our complete product range and discover why thousands of
+                customers trust Viju Industries (Nigeria) Limited for their
+                beverage and dairy needs.
               </motion.p>
-              
+
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
