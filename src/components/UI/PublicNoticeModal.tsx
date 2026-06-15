@@ -8,16 +8,11 @@ import {
   X,
 } from "lucide-react";
 
-const STORAGE_KEY = "viju_public_notice_dismissed";
-
 const PublicNoticeModal: React.FC = () => {
   const [open, setOpen] = useState(false);
 
-  // Show once per browser, shortly after the app loads.
+  // Show on every page load/refresh, shortly after the app mounts.
   useEffect(() => {
-    if (typeof window === "undefined") return;
-    const dismissed = window.localStorage.getItem(STORAGE_KEY);
-    if (dismissed) return;
     const timer = setTimeout(() => setOpen(true), 900);
     return () => clearTimeout(timer);
   }, []);
@@ -38,11 +33,7 @@ const PublicNoticeModal: React.FC = () => {
   }, [open]);
 
   const handleClose = () => {
-    try {
-      window.localStorage.setItem(STORAGE_KEY, "1");
-    } catch {
-      /* ignore storage errors */
-    }
+    // Closes for this view only; it returns on the next page refresh.
     setOpen(false);
   };
 
