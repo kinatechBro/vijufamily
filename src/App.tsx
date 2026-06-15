@@ -15,6 +15,7 @@ import Vacancies from "./pages/Vacancies";
 import DistributorRegistration from "./pages/DistributorRegistration";
 import ProductDetail from "./pages/ProductDetail";
 import EducationalTour from "./pages/EducationalTour";
+import PublicNotice from "./pages/PublicNotice";
 import Checkout from "./pages/Checkout";
 import ShoppingCart from "./components/Ecommerce/ShoppingCart";
 import PageTester from "./components/TestRunner/PageTester";
@@ -69,6 +70,7 @@ function App() {
                       path="/distributor"
                       element={<DistributorRegistration />}
                     />
+                    <Route path="/notice" element={<PublicNotice />} />
                     <Route path="/test" element={<PageTester />} />
                     {/* Catch-all route for 404 */}
                     <Route
