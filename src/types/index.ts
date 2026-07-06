@@ -39,20 +39,12 @@ export interface ContactForm {
 export interface DistributorForm {
   firstName: string;
   lastName: string;
-  regNumber: number;
-  numberOfTrucks: number;
-  truckType: string;
-
   companyName: string;
-  contactPerson: string;
+  regNumber: string;
   email: string;
   phone: string;
-  address: string;
-  city: string;
-  state: string;
-  pincode: string;
-  businessType: string;
-  experience: string;
+  numberOfTrucks: string;
+  truckType: string;
   territory: string;
-  investment: string;
+  address: string;
 }

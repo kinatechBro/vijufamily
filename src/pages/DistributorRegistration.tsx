@@ -4,21 +4,24 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { Send, Building, Users, MapPin, DollarSign } from 'lucide-react';
+import toast from 'react-hot-toast';
 import { DistributorForm } from '../types';
 
+// Applications are delivered by email through FormSubmit (no backend needed).
+const FORMSUBMIT_ENDPOINT = 'https://formsubmit.co/ajax/distributor@vijufamily.com';
+
+// Validate exactly the fields rendered in the form below.
 const schema = yup.object().shape({
-  companyName: yup.string().required('Company name is required'),
-  contactPerson: yup.string().required('Contact person is required'),
+  firstName: yup.string().required('First name is required'),
+  lastName: yup.string().required('Last name is required'),
+  companyName: yup.string().required('Business name is required'),
+  regNumber: yup.string().required('Registration number is required'),
   email: yup.string().email('Invalid email').required('Email is required'),
   phone: yup.string().required('Phone number is required'),
+  numberOfTrucks: yup.string().required('Number of trucks is required'),
+  truckType: yup.string().required('Truck type is required'),
+  territory: yup.string().required('Location/area cover is required'),
   address: yup.string().required('Address is required'),
-  city: yup.string().required('City is required'),
-  state: yup.string().required('State is required'),
-  pincode: yup.string().required('Pincode is required'),
-  businessType: yup.string().required('Business type is required'),
-  experience: yup.string().required('Experience is required'),
-  territory: yup.string().required('Territory is required'),
-  investment: yup.string().required('Investment capacity is required'),
 });
 
 const DistributorRegistration: React.FC = () => {
@@ -33,13 +36,40 @@ const DistributorRegistration: React.FC = () => {
 
   const onSubmit = async (data: DistributorForm) => {
     try {
-      // In a real app, this would submit to WordPress API
-      console.log('Distributor registration submitted:', data);
-      alert('Thank you for your interest! We will review your application and get back to you soon.');
+      const response = await fetch(FORMSUBMIT_ENDPOINT, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          _subject: `New Distributor Application — ${data.companyName}`,
+          _template: 'table',
+          'First Name': data.firstName,
+          'Last Name': data.lastName,
+          'Business Name': data.companyName,
+          'Reg Number': data.regNumber,
+          Email: data.email,
+          Phone: data.phone,
+          'No. of Trucks': data.numberOfTrucks,
+          'Truck Types': data.truckType,
+          'Location/Area Cover': data.territory,
+          Address: data.address,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error(`Submission failed with status ${response.status}`);
+      }
+
+      toast.success(
+        'Thank you for your interest! We will review your application and get back to you soon.',
+        { duration: 6000 }
+      );
       reset();
     } catch (error) {
       console.error('Error submitting form:', error);
-      alert('There was an error submitting your application. Please try again.');
+      toast.error('There was an error submitting your application. Please try again.');
     }
   };
 
