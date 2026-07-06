@@ -88,7 +88,7 @@ const Slider: React.FC = () => {
 
         <div className="relative group">
           {/* Slider Container */}
-          <div className="relative h-[600px] md:h-[700px] rounded-3xl overflow-hidden">
+          <div className="relative h-[320px] sm:h-[420px] md:h-[560px] lg:h-[700px] rounded-2xl sm:rounded-3xl overflow-hidden">
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentSlide}
@@ -104,19 +104,19 @@ const Slider: React.FC = () => {
                 >
                   {/* Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
-                  
+
                   {/* Content Overlay */}
-                  <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12">
+                  <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-8 md:p-12">
                     <motion.div
                       initial={{ opacity: 0, y: 30 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.6, delay: 0.2 }}
                       className="max-w-2xl"
                     >
-                      <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                      <h3 className="text-lg sm:text-3xl md:text-4xl font-bold text-white mb-1.5 sm:mb-4">
                         {sliderImages[currentSlide].title}
                       </h3>
-                      <p className="text-gray-200 text-lg md:text-xl leading-relaxed">
+                      <p className="text-gray-200 text-xs sm:text-lg md:text-xl leading-relaxed line-clamp-2 sm:line-clamp-none">
                         {sliderImages[currentSlide].description}
                       </p>
                     </motion.div>
@@ -125,27 +125,27 @@ const Slider: React.FC = () => {
               </motion.div>
             </AnimatePresence>
 
-            {/* Navigation Arrows */}
+            {/* Navigation Arrows — always visible on touch devices, hover-reveal only on large screens */}
             <button
               onClick={prevSlide}
-              className="absolute left-6 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/10 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-all duration-300 opacity-0 group-hover:opacity-100"
+              className="absolute left-2 sm:left-6 top-1/2 -translate-y-1/2 w-9 h-9 sm:w-12 sm:h-12 bg-white/10 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-all duration-300 opacity-100 lg:opacity-0 lg:group-hover:opacity-100"
             >
-              <ChevronLeft className="w-6 h-6" />
+              <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
             </button>
-            
+
             <button
               onClick={nextSlide}
-              className="absolute right-6 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/10 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-all duration-300 opacity-0 group-hover:opacity-100"
+              className="absolute right-2 sm:right-6 top-1/2 -translate-y-1/2 w-9 h-9 sm:w-12 sm:h-12 bg-white/10 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-all duration-300 opacity-100 lg:opacity-0 lg:group-hover:opacity-100"
             >
-              <ChevronRight className="w-6 h-6" />
+              <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
             </button>
 
             {/* Auto-play Toggle */}
             <button
               onClick={() => setIsAutoPlay(!isAutoPlay)}
-              className="absolute top-6 right-6 w-12 h-12 bg-white/10 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-all duration-300"
+              className="absolute top-3 right-3 sm:top-6 sm:right-6 w-9 h-9 sm:w-12 sm:h-12 bg-white/10 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-all duration-300"
             >
-              {isAutoPlay ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5" />}
+              {isAutoPlay ? <Pause className="w-4 h-4 sm:w-5 sm:h-5" /> : <Play className="w-4 h-4 sm:w-5 sm:h-5" />}
             </button>
           </div>
 

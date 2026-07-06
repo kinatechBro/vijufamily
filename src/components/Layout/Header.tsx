@@ -106,35 +106,35 @@ const Header: React.FC = () => {
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           scrolled
             ? "bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl shadow-2xl border-b border-slate-200/20 dark:border-slate-700/20"
-            : "bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl shadow-lg border-b border-slate-200/20 dark:border-slate-700/20 lg:bg-transparent lg:dark:bg-transparent lg:backdrop-blur-none lg:shadow-none lg:border-none"
+            : "bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl shadow-lg border-b border-slate-200/20 dark:border-slate-700/20 xl:bg-transparent xl:dark:bg-transparent xl:backdrop-blur-none xl:shadow-none xl:border-none"
         }`}
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20">
+          <div className="flex items-center justify-between h-16 sm:h-20">
             {/* Enhanced Logo */}
             <Link
               to="/"
-              className="flex items-center space-x-4 group relative z-10"
+              className="flex items-center space-x-2 sm:space-x-4 group relative z-10 min-w-0 shrink-0"
               aria-label="Viju Industries (Nigeria) Limited Home"
             >
               <motion.div
-                className="relative"
+                className="relative shrink-0"
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3, ease: "easeOut" }}
               >
-                <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center shadow-xl relative overflow-hidden border-2 border-orange-200">
+                <div className="w-11 h-11 sm:w-14 sm:h-14 bg-white rounded-xl sm:rounded-2xl flex items-center justify-center shadow-xl relative overflow-hidden border-2 border-orange-200">
                   <img
                     src="/assets/viju_logo.png"
                     alt="Viju Industries (Nigeria) Limited Logo"
-                    className="w-10 h-10 object-contain relative z-10"
+                    className="w-8 h-8 sm:w-10 sm:h-10 object-contain relative z-10"
                   />
                   <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent"></div>
                   <div className="absolute -inset-1 bg-gradient-to-br from-red-600 to-orange-500 rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-xl"></div>
                 </div>
               </motion.div>
-              <div className="flex flex-col">
+              <div className="flex flex-col min-w-0">
                 <motion.span
-                  className={`text-2xl font-bold transition-all duration-300 ${
+                  className={`text-base sm:text-xl md:text-2xl font-bold whitespace-nowrap truncate transition-all duration-300 ${
                     scrolled
                       ? "text-slate-900 dark:text-white"
                       : location.pathname === "/"
@@ -143,10 +143,11 @@ const Header: React.FC = () => {
                   } group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-red-600 group-hover:to-orange-500`}
                   whileHover={{ scale: 1.02 }}
                 >
-                  Viju Industries (Nigeria) Limited
+                  <span className="sm:hidden">Viju Industries</span>
+                  <span className="hidden sm:inline">Viju Industries (Nigeria) Limited</span>
                 </motion.span>
                 <span
-                  className={`text-sm font-medium transition-colors duration-300 ${
+                  className={`hidden xs:block text-xs sm:text-sm font-medium truncate transition-colors duration-300 ${
                     scrolled
                       ? "text-slate-500 dark:text-slate-400"
                       : "text-slate-600 dark:text-white/80"
@@ -159,7 +160,7 @@ const Header: React.FC = () => {
 
             {/* Desktop Navigation */}
             <nav
-              className="hidden lg:flex items-center space-x-2"
+              className="hidden xl:flex items-center space-x-0.5 2xl:space-x-2"
               role="navigation"
             >
               {menuItems.map((item) => (
@@ -168,7 +169,7 @@ const Header: React.FC = () => {
                     <div className="relative">
                       <motion.button
                         onClick={(e) => handleDropdownToggle(item.label, e)}
-                        className={`flex items-center px-5 py-3 rounded-xl font-medium transition-all duration-300 hover:bg-slate-100/80 dark:hover:bg-slate-800/80 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 dark:focus:ring-offset-slate-900 backdrop-blur-sm ${
+                        className={`flex items-center px-2.5 py-2.5 2xl:px-5 2xl:py-3 text-sm 2xl:text-base rounded-xl font-medium whitespace-nowrap transition-all duration-300 hover:bg-slate-100/80 dark:hover:bg-slate-800/80 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 dark:focus:ring-offset-slate-900 backdrop-blur-sm ${
                           location.pathname === item.path ||
                           (item.label === "Products" &&
                             location.pathname.startsWith("/products")) ||
@@ -192,7 +193,7 @@ const Header: React.FC = () => {
                           }}
                           transition={{ duration: 0.3 }}
                         >
-                          <ChevronDown className="ml-2 w-4 h-4" />
+                          <ChevronDown className="ml-1 2xl:ml-2 w-4 h-4" />
                         </motion.div>
                       </motion.button>
 
@@ -250,7 +251,7 @@ const Header: React.FC = () => {
                     >
                       <Link
                         to={item.path}
-                        className={`px-5 py-3 rounded-xl font-medium transition-all duration-300 hover:bg-slate-100/80 dark:hover:bg-slate-800/80 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 dark:focus:ring-offset-slate-900 backdrop-blur-sm ${
+                        className={`px-2.5 py-2.5 2xl:px-5 2xl:py-3 text-sm 2xl:text-base rounded-xl font-medium whitespace-nowrap transition-all duration-300 hover:bg-slate-100/80 dark:hover:bg-slate-800/80 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 dark:focus:ring-offset-slate-900 backdrop-blur-sm ${
                           location.pathname === item.path
                             ? "text-orange-600 dark:text-orange-400 bg-orange-50/80 dark:bg-orange-900/30 shadow-lg"
                             : scrolled
@@ -274,7 +275,7 @@ const Header: React.FC = () => {
               {/* Mobile Menu Button */}
               <motion.button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className={`lg:hidden p-3 rounded-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 dark:focus:ring-offset-slate-900 ${
+                className={`xl:hidden p-3 rounded-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 dark:focus:ring-offset-slate-900 ${
                   scrolled
                     ? "text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800"
                     : "text-slate-700 dark:text-white hover:bg-slate-100/50 dark:hover:bg-white/10"
@@ -302,7 +303,7 @@ const Header: React.FC = () => {
                 animate={{ opacity: 1, height: "auto" }}
                 exit={{ opacity: 0, height: 0 }}
                 transition={{ duration: 0.4, ease: "easeInOut" }}
-                className="lg:hidden bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl border-t border-slate-200/20 dark:border-slate-700/20 py-6 overflow-hidden rounded-b-2xl shadow-2xl"
+                className="xl:hidden bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl border-t border-slate-200/20 dark:border-slate-700/20 py-6 overflow-hidden rounded-b-2xl shadow-2xl"
                 role="navigation"
               >
                 <div className="space-y-2">

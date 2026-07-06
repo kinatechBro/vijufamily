@@ -106,10 +106,10 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-          <p className="text-gray-300 text-sm">
-            © 2024 Viju Industries. All rights reserved. | 
-            <Link to="/privacy" className="hover:text-red-500 transition-colors duration-200 ml-1 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded">Privacy Policy</Link> | 
+        <div className="border-t border-gray-800 mt-8 pt-8 pb-16 sm:pb-0 text-center">
+          <p className="text-gray-300 text-sm px-4 sm:px-0">
+            © 2024 Viju Industries. All rights reserved. |{' '}
+            <Link to="/privacy" className="hover:text-red-500 transition-colors duration-200 ml-1 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded">Privacy Policy</Link> |{' '}
             <Link to="/terms" className="hover:text-red-500 transition-colors duration-200 ml-1 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-gray-900 rounded">Terms of Service</Link>
           </p>
         </div>

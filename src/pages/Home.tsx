@@ -42,7 +42,7 @@ const Home: React.FC = () => {
       {showBackToTop && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 z-50 group w-14 h-14 bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center justify-center animate-bounce-slow"
+          className="fixed bottom-4 right-4 sm:bottom-8 sm:right-8 z-50 group w-11 h-11 sm:w-14 sm:h-14 bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center justify-center animate-bounce-slow"
           aria-label="Back to top"
         >
           <ChevronUp className="w-6 h-6 text-white group-hover:scale-110 transition-transform duration-200" />

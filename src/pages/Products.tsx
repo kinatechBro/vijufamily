@@ -63,7 +63,7 @@ const Products: React.FC = () => {
   ];
 
   return (
-    <div className="pt-16">
+    <div className="pt-16 sm:pt-20">
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-red-50 to-red-100 dark:from-gray-900 dark:to-gray-800">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -86,9 +86,9 @@ const Products: React.FC = () => {
       {/* Filters */}
       <section className="py-6 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-700">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row gap-4 items-center justify-between">
+          <div className="flex flex-col lg:flex-row gap-4 items-stretch lg:items-center justify-between">
             {/* Search */}
-            <div className="relative flex-1 max-w-sm">
+            <div className="relative flex-1 lg:max-w-sm">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
               <input
                 type="text"
@@ -100,7 +100,7 @@ const Products: React.FC = () => {
             </div>
 
             {/* Filters and Controls */}
-            <div className="flex items-center gap-4">
+            <div className="flex flex-wrap items-center gap-2 sm:gap-4">
               {/* Category Filter */}
               <select
                 value={selectedCategory}

@@ -3,7 +3,7 @@ import ContactForm from '../components/Forms/ContactForm';
 
 const Contact: React.FC = () => {
   return (
-    <div className="pt-16">
+    <div className="pt-16 sm:pt-20">
       <ContactForm />
     </div>
   );

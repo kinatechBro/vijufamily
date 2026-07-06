@@ -46,7 +46,7 @@ const About: React.FC = () => {
   ];
 
   return (
-    <div className="pt-16">
+    <div className="pt-16 sm:pt-20">
       {/* Ultra-Modern Hero Section - Brand Colors */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-50 to-white dark:from-slate-900 dark:to-slate-800">
         {/* Dynamic gradient background with brand colors */}
@@ -164,13 +164,13 @@ const About: React.FC = () => {
               className="relative"
             >
               {/* Floating cards */}
-              <div className="relative h-[600px]">
+              <div className="relative flex flex-col gap-4 lg:block lg:h-[600px]">
                 {/* Main product showcase */}
                 <motion.div
                   initial={{ opacity: 0, scale: 0.8, rotate: -5 }}
                   animate={{ opacity: 1, scale: 1, rotate: 0 }}
                   transition={{ duration: 1, delay: 0.8 }}
-                  className="absolute top-0 left-0 w-80 h-96 bg-white/90 backdrop-blur-xl border border-orange-200 dark:bg-white/10 dark:border-white/20 rounded-3xl p-8 shadow-2xl"
+                  className="w-full h-auto lg:absolute lg:top-0 lg:left-0 lg:w-80 lg:h-96 bg-white/90 backdrop-blur-xl border border-orange-200 dark:bg-white/10 dark:border-white/20 rounded-3xl p-8 shadow-2xl"
                 >
                   <div className="h-full flex flex-col justify-between">
                     <div>
@@ -197,7 +197,7 @@ const About: React.FC = () => {
                   initial={{ opacity: 0, scale: 0.8, rotate: 5 }}
                   animate={{ opacity: 1, scale: 1, rotate: 0 }}
                   transition={{ duration: 1, delay: 1.0 }}
-                  className="absolute top-20 right-0 w-72 h-80 bg-gradient-to-br from-white/95 to-orange-50/80 dark:from-white/15 dark:to-white/5 backdrop-blur-xl border border-orange-200 dark:border-white/20 rounded-3xl p-6 shadow-2xl"
+                  className="w-full h-auto lg:absolute lg:top-20 lg:right-0 lg:w-72 lg:h-80 bg-gradient-to-br from-white/95 to-orange-50/80 dark:from-white/15 dark:to-white/5 backdrop-blur-xl border border-orange-200 dark:border-white/20 rounded-3xl p-6 shadow-2xl"
                 >
                   <div className="h-full flex flex-col justify-between">
                     <div>
@@ -243,7 +243,7 @@ const About: React.FC = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 1, delay: 1.2 }}
-                  className="absolute bottom-0 left-20 w-60 h-32 bg-gradient-to-r from-red-50/90 to-orange-50/90 dark:from-red-500/20 dark:to-orange-500/20 backdrop-blur-xl border border-red-200 dark:border-red-400/30 rounded-2xl p-4 shadow-xl"
+                  className="w-full h-auto lg:absolute lg:bottom-0 lg:left-20 lg:w-60 lg:h-32 bg-gradient-to-r from-red-50/90 to-orange-50/90 dark:from-red-500/20 dark:to-orange-500/20 backdrop-blur-xl border border-red-200 dark:border-red-400/30 rounded-2xl p-4 shadow-xl"
                 >
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-center">

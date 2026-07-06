@@ -36,7 +36,7 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onLoadingComplete }) => {
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5 }}
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-gradient-to-br from-white via-gray-50 to-orange-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-700"
+          className="fixed inset-0 z-[100] flex items-center justify-center overflow-y-auto bg-gradient-to-br from-white via-gray-50 to-orange-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-700 px-4 py-10"
         >
           {/* Background Pattern */}
           <div className="absolute inset-0 overflow-hidden">
@@ -44,37 +44,37 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onLoadingComplete }) => {
             <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-r from-orange-200/20 to-red-200/20 dark:from-orange-400/10 dark:to-red-400/10 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-1000"></div>
           </div>
 
-          <div className="relative z-10 flex flex-col items-center space-y-8">
+          <div className="relative z-10 flex flex-col items-center space-y-4 sm:space-y-6 md:space-y-8 my-auto">
             {/* Logo Container */}
             <motion.div
               initial={{ scale: 0.5, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              className="relative"
+              className="relative w-20 h-20 sm:w-28 sm:h-28 md:w-32 md:h-32"
             >
               {/* Animated Rings */}
               <motion.div
                 animate={{ rotate: 360 }}
                 transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
-                className="absolute inset-0 w-32 h-32 border-2 border-transparent border-t-red-500 border-r-orange-500 rounded-full"
+                className="absolute inset-0 border-2 border-transparent border-t-red-500 border-r-orange-500 rounded-full"
               />
               <motion.div
                 animate={{ rotate: -360 }}
                 transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
-                className="absolute inset-2 w-28 h-28 border-2 border-transparent border-b-orange-400 border-l-red-400 rounded-full opacity-60"
+                className="absolute inset-2 border-2 border-transparent border-b-orange-400 border-l-red-400 rounded-full opacity-60"
               />
-              
+
               {/* Logo */}
               <motion.div
                 initial={{ scale: 0.8 }}
                 animate={{ scale: [0.8, 1.1, 1] }}
                 transition={{ duration: 1.5, ease: "easeInOut" }}
-                className="relative w-32 h-32 bg-white rounded-full flex items-center justify-center shadow-2xl border-4 border-orange-200 dark:border-orange-300"
+                className="relative w-full h-full bg-white rounded-full flex items-center justify-center shadow-2xl border-4 border-orange-200 dark:border-orange-300"
               >
-                <img 
-                  src="/assets/viju_logo.png" 
-                  alt="Viju Industries (Nigeria) Limited Logo" 
-                  className="w-20 h-20 object-contain"
+                <img
+                  src="/assets/viju_logo.png"
+                  alt="Viju Industries (Nigeria) Limited Logo"
+                  className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 object-contain"
                 />
                 <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent rounded-full"></div>
               </motion.div>
@@ -85,12 +85,13 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onLoadingComplete }) => {
               initial={{ y: 30, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.5 }}
-              className="text-center space-y-2"
+              className="text-center space-y-1 sm:space-y-2 px-2"
             >
-              <h1 className="text-4xl md:text-5xl font-black bg-gradient-to-r from-red-600 via-orange-500 to-red-500 bg-clip-text text-transparent">
-                Viju Industries (Nigeria) Limited
+              <h1 className="text-xl sm:text-3xl md:text-5xl font-black bg-gradient-to-r from-red-600 via-orange-500 to-red-500 bg-clip-text text-transparent">
+                <span className="sm:hidden">Viju Industries</span>
+                <span className="hidden sm:inline">Viju Industries (Nigeria) Limited</span>
               </h1>
-              <p className="text-lg text-gray-600 dark:text-gray-300 font-medium">
+              <p className="text-sm sm:text-lg text-gray-600 dark:text-gray-300 font-medium">
                 Premium Quality
               </p>
             </motion.div>
@@ -100,7 +101,7 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onLoadingComplete }) => {
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.8 }}
-              className="w-64 space-y-3"
+              className="w-52 sm:w-64 space-y-2 sm:space-y-3"
             >
               {/* Progress Bar */}
               <div className="relative h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
@@ -113,9 +114,9 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onLoadingComplete }) => {
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-shimmer"></div>
                 </motion.div>
               </div>
-              
+
               {/* Progress Text */}
-              <div className="flex justify-between items-center text-sm">
+              <div className="flex justify-between items-center text-xs sm:text-sm">
                 <span className="text-gray-500 dark:text-gray-400">Loading...</span>
                 <span className="text-gray-600 dark:text-gray-300 font-semibold">{progress}%</span>
               </div>
@@ -126,29 +127,22 @@ const LoadingScreen: React.FC<LoadingScreenProps> = ({ onLoadingComplete }) => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 1.2 }}
-              className="text-center"
+              className="text-center px-4"
             >
               <motion.p
                 animate={{ opacity: [0.5, 1, 0.5] }}
                 transition={{ duration: 2, repeat: Infinity }}
-                className="text-gray-500 dark:text-gray-400 text-sm"
+                className="text-gray-500 dark:text-gray-400 text-xs sm:text-sm"
               >
                 Preparing your premium experience...
               </motion.p>
             </motion.div>
-          </div>
 
-          {/* Corner Branding */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1.5 }}
-            className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-          >
-            <p className="text-xs text-gray-400 dark:text-gray-500 text-center">
+            {/* Branding (kept in normal flow so it can never be clipped by tall content) */}
+            <p className="text-xs text-gray-400 dark:text-gray-500 text-center pt-2">
               Powered by Quality & Innovation
             </p>
-          </motion.div>
+          </div>
         </motion.div>
       )}
     </AnimatePresence>

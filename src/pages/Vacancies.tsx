@@ -301,14 +301,14 @@ const Vacancies: React.FC = () => {
 
   if (loading) {
     return (
-      <div className="pt-16 min-h-screen flex items-center justify-center">
+      <div className="pt-16 sm:pt-20 min-h-screen flex items-center justify-center">
         <div className="loading-spinner"></div>
       </div>
     );
   }
 
   return (
-    <div className="pt-16">
+    <div className="pt-16 sm:pt-20">
       {/* Hero Section */}
       <section className="relative py-32 overflow-hidden">
         {/* Modern gradient background with glass effect */}

@@ -118,14 +118,14 @@ const Activities: React.FC = () => {
 
   if (loading) {
     return (
-      <div className="pt-16 min-h-screen flex items-center justify-center">
+      <div className="pt-16 sm:pt-20 min-h-screen flex items-center justify-center">
         <div className="loading-spinner"></div>
       </div>
     );
   }
 
   return (
-    <div className="pt-16">
+    <div className="pt-16 sm:pt-20">
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-red-50 to-red-100">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">

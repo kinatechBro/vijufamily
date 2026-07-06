@@ -51,7 +51,7 @@ const Checkout: React.FC = () => {
 
   if (items.length === 0) {
     return (
-      <div className="pt-16 min-h-screen flex items-center justify-center">
+      <div className="pt-16 sm:pt-20 min-h-screen flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">
             Your cart is empty
@@ -95,7 +95,7 @@ const Checkout: React.FC = () => {
   const paymentMethod = watch('paymentMethod');
 
   return (
-    <div className="pt-16 min-h-screen bg-slate-50 dark:bg-slate-900">
+    <div className="pt-16 sm:pt-20 min-h-screen bg-slate-50 dark:bg-slate-900">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header */}
         <div className="flex items-center justify-between mb-8">

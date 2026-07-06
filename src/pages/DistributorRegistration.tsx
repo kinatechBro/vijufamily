@@ -195,7 +195,7 @@ const DistributorRegistration: React.FC = () => {
   };
 
   return (
-    <div className="pt-16">
+    <div className="pt-16 sm:pt-20">
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 bg-gradient-to-br from-red-50 via-orange-50 to-red-100 dark:from-slate-900 dark:via-slate-900 dark:to-slate-800">
         <div className="absolute -top-24 -right-24 w-96 h-96 bg-orange-300/30 dark:bg-orange-500/10 rounded-full blur-3xl" />
